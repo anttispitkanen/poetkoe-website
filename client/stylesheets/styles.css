@@ -1,0 +1,112 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 0 0 0;
+  background-image: url("images/teddy.jpg");
+  background-size: cover;
+  background-color: #E3FBFC;
+}
+
+.main-layout {
+  min-height: 100%;
+}
+
+
+
+header {
+  background-color: #555;
+  color: white;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+header nav {
+  height: 100%;
+  position: relative;
+}
+
+
+header nav div {
+  /*display: block;*/
+  float: left;
+  height: 100%;
+  width: 60px;
+  border-right: 1px solid #555;
+  text-align: center;
+  position: relative;
+  pointer-events: none;
+  /*margin: auto;*/
+
+}
+
+/*
+header nav div:hover {
+  background-color: #666;
+}
+*/
+
+header nav div a {
+  text-decoration: none;
+  color: white;
+  /*height: 100%;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  pointer-events: auto;
+}
+
+header nav div:hover {
+  background-color: #666;
+}
+
+
+header nav img {
+  height: 40px;
+  width: auto;
+  position: absolute;
+  top: 9px;
+  right: 70px;
+  /*left: 50%;*/
+  /*transform: translate(0, -50%);*/
+}
+
+/*
+main {
+  height: 100%;
+  background-color: #CFFCFF;
+}
+*/
+
+h1 {
+  color: #555;
+  font-size: 4em;
+}
+
+footer {
+  background-color: #555;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer ul li a:hover {
+  color: #AAA;
+}
