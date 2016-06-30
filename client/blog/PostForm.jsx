@@ -5,9 +5,10 @@ export default class PostForm extends Component {
   addPost(event) {
     event.preventDefault();
 
-    Meteor.call("addPost", this.refs.blogpost.value);
+    Meteor.call("addPost", this.refs.heading.value, this.refs.post.value);
 
-    this.refs.blogpost.value = "";
+    this.refs.heading.value = "";
+    this.refs.post.value = "";
   }
 
   render() {
@@ -15,8 +16,13 @@ export default class PostForm extends Component {
       <form className="newPost" onSubmit={this.addPost.bind(this)}>
         <input
             type="text-area"
-            ref="blogpost"
-            placeholder="Kirjoita jotain :DD"/>
+            ref="heading"
+            placeholder="Otsikko"/>
+        <input
+            type="text-area"
+            ref="post"
+            placeholder="Sisältö"/>
+        <button type="submit">Submit</button>
       </form>
     )
   }

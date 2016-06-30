@@ -7,7 +7,11 @@ export default class Home extends Component {
 
   render() {
     return(
-      <h1>Pötkö pömpyläinen :DD</h1>
+      <div className="content-wrapper">
+        <div className="home-wrapper">
+          <h1>Poetkoe</h1>
+        </div>
+      </div>
     )
   }
 }

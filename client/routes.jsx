@@ -5,6 +5,7 @@ import Home from './home/Home.jsx';
 import Bio from './bio/Bio.jsx';
 import Music from './music/Music.jsx';
 import Blog from './blog/Blog.jsx';
+import SinglePost from './blog/SinglePost.jsx';
 
 
 FlowRouter.route('/', {
@@ -35,6 +36,14 @@ FlowRouter.route('/blog', {
   action() {
     mount(MainLayout, {
       content: (<Blog />)
+    })
+  }
+});
+
+FlowRouter.route('/blog/:id', {
+  action(params) {
+    mount(MainLayout, {
+      content: (<SinglePost id={params.id} />)
     })
   }
 });
