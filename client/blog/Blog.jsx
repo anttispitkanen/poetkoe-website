@@ -12,8 +12,9 @@ export default class Blog extends TrackerReact(Component) {
     this.state = {
       subscription: {
         posts: Meteor.subscribe("allPosts")
-      }
-    }
+      },
+      search: ''
+    };
   }
 
   componentWillUnmount() {
@@ -25,13 +26,29 @@ export default class Blog extends TrackerReact(Component) {
     return Posts.find().fetch().reverse();
   }
 
+  updateSearch(event) {
+    this.setState({search: event.target.value});
+  }
+
 
 
   render() {
+
+    let filteredPosts = this.posts();
+
     return(
       <div className="content-wrapper">
         <h1>Blog</h1>
         <PostForm />
+        <form className="search-box">
+          <input
+              type="text-area"
+              ref="search"
+              value={this.state.search}
+              onChange={this.updateSearch.bind(this)}
+              placeholder="Hae jotain"/>
+          <button type="submit">Search</button>
+        </form>
         <ul class="blog-posts">
           {this.posts().map( (post)=>{
             return <Post key={post._id} post={post} />
