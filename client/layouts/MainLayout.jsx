@@ -10,6 +10,7 @@ export const MainLayout = ({content}) => (
         <div><a href="/bio">Bio</a></div>
         <div><a href="/music">Music</a></div>
         <div><a href="/blog">Blog</a></div>
+        <div><a href="/games">Games</a></div>
 
         <a href="/"><img src="images/poetkoe.png" /></a>
       </nav>
@@ -28,8 +29,8 @@ export const MainLayout = ({content}) => (
       </div>
 
       <div className="copyright-and-contact">
-        © 2016 Antti Pitkänen <br/>
-        <a href="mailto:poetkoeofficial@gmail.com">poetkoeofficial@gmail.com</a> 
+        © 2016 <a href="https://github.com/anttispitkanen" target="_blank">Antti Pitkänen</a> <br/>
+        <a href="mailto:poetkoeofficial@gmail.com">poetkoeofficial@gmail.com</a>
       </div>
 
     </footer>

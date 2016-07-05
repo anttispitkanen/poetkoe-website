@@ -37,11 +37,13 @@ export default class SinglePost extends TrackerReact(Component) {
           <li className="single-post">
             <div>
               <h2>{post.heading}</h2>
+              <div className="timestamp-and-signature">{moment(post.createdAt).fromNow()} by Antti "Poetkoe" Pitkänen</div>
               <p>{post.text}</p>
+              <a className="back" href="/blog">Back</a>
             </div>
           </li>
         </ul>
-        <div className="timestamp">{moment(post.createdAt).fromNow()}</div>
+
       </div>
     )
   }

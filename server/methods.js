@@ -1,6 +1,8 @@
 Meteor.methods({
   addPost(heading, post) {
 
+    let searchableText = heading + " " + post;
+
     let preview = "";
 
     if (post.length > 300) {
@@ -10,6 +12,7 @@ Meteor.methods({
     }
 
     Posts.insert({
+      searchableText: searchableText,
       heading: heading,
       text: post,
       preview: preview,

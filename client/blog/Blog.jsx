@@ -34,23 +34,25 @@ export default class Blog extends TrackerReact(Component) {
 
   render() {
 
-    let filteredPosts = this.posts();
+    let filteredPosts = this.posts().filter(
+      (post) => {
+        return post.searchableText.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      }
+    );
 
     return(
       <div className="content-wrapper">
         <h1>Blog</h1>
         <PostForm />
-        <form className="search-box">
-          <input
-              type="text-area"
-              ref="search"
-              value={this.state.search}
-              onChange={this.updateSearch.bind(this)}
-              placeholder="Hae jotain"/>
-          <button type="submit">Search</button>
-        </form>
+        <input className="search-box"
+            type="text-area"
+            ref="search"
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)}
+            placeholder="Search from blog"/>
+
         <ul class="blog-posts">
-          {this.posts().map( (post)=>{
+          {filteredPosts.map( (post)=>{
             return <Post key={post._id} post={post} />
           })}
         </ul>

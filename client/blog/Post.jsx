@@ -11,7 +11,7 @@ export default class Post extends Component {
         <div>
           <h2><a href={`/blog/${postId}`}>{this.props.post.heading}</a></h2>
           <p>{this.props.post.preview}</p>
-          <div className="timestamp">{moment(this.props.post.createdAt).fromNow()}</div>
+          <span className="timestamp">{moment(this.props.post.createdAt).fromNow()}</span>
         </div>
       </li>
     )
