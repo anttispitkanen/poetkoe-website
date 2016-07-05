@@ -4,27 +4,44 @@ import Mine from './Mine.jsx';
 import EmptySquare from './EmptySquare.jsx';
 
 export default class Poetkoesweeper extends TrackerReact(Component) {
-
   constructor() {
     super();
+
     this.state = {
-      grid: [
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [2, 3, 1, 2, 3, 1, 2, 3, 4, 1],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [3, 1, 2, 3, 1, 2, 3, 4, 1, 2],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4],
-        [1, 2, 3, 1, 2, 3, 1, 2, 3, 4]
-      ]
+      numMines: 15
+    };
+  }
+
+  generateGrid() {
+    let numMines = this.state.numMines;
+    let arrayToBeFilledWithRandomNumbers = [];
+    let singleRow = [];
+
+    //first populate grid with 0s (EmptySquares)
+    for(i = 0; i < 10; i++) {
+      singleRow = [];
+      for(j = 0; j < 10; j++) {
+        singleRow.push(0);
+      }
+      arrayToBeFilledWithRandomNumbers.push(singleRow);
     }
+
+    //then add numMines mines, making sure they end up in separata locations
+    while(numMines > 0) {
+      let i = Math.floor((Math.random() * 10));
+      let j = Math.floor((Math.random() * 10));
+
+      if(arrayToBeFilledWithRandomNumbers[i][j] !== 1) {
+        arrayToBeFilledWithRandomNumbers[i][j] = 1;
+        numMines--;
+      }
+    }
+
+    return arrayToBeFilledWithRandomNumbers;
   }
 
   countMines() {
-    let grid = this.state.grid;
+    let grid = this.generateGrid();
     let returnedGrid = [];
 
     //for each square in the grid
@@ -53,11 +70,9 @@ export default class Poetkoesweeper extends TrackerReact(Component) {
             }
           }
           //in case it's not a mine push EmptySquare with numberOfTouchingMines as prop
-          //console.log(numberOfTouchingMines);
           returnedGrid.push(<EmptySquare neighbouringMines={numberOfTouchingMines} key={id} />);
         } else {
           //in case it is a mine just push a mine
-          //console.log("miina");
           returnedGrid.push(<Mine key={id} />);
         }
       }
@@ -69,10 +84,12 @@ export default class Poetkoesweeper extends TrackerReact(Component) {
 
   render() {
 
+
     let components = this.countMines();
 
     return(
       <div>
+        <h3>There are {this.state.numMines} cats to avoid disturbing</h3>
         <div className="poetkoesweeper-grid">
           {components.map( (component) => {
             return component;
@@ -83,13 +100,3 @@ export default class Poetkoesweeper extends TrackerReact(Component) {
     )
   }
 }
-
-//{components.map( (row, i) => {
-//  return row.map( (component, j) => {
-//    if (component === 1) {
-//      return <Mine key={(i+1)*j} />
-//    } else {
-//      return <EmptySquare key={(i+1)*j} />
-//    }
-//  }
-//)})}

@@ -12,7 +12,7 @@ export default class Namegenerator extends TrackerReact(Component) {
   }
 
   updateName(event) {
-    this.setState({originalName: event.target.value.substr(0, 30)});
+    this.setState({originalName: event.target.value.substr(0, 28)});
   }
 
   poetkoeifyName(event) {
