@@ -2,6 +2,16 @@ import React, {Component} from 'react';
 
 export default class Bio extends Component {
 
+  showGear() {
+    let display = document.getElementById('gear').style.display;
+
+    if (display === "block") {
+      document.getElementById('gear').style.display = "none";
+    } else {
+      document.getElementById('gear').style.display = "block";
+    }
+  }
+
   render() {
 
     return(
@@ -28,31 +38,45 @@ export default class Bio extends Component {
             myself. I don't play drums but I beatbox when necessary ;)
           </p>
           <p>
-            Doing everything myself has a its advantages – I get to have all the fun of playing every instrument!
+            Doing everything myself has its advantages – I get to have all the fun of playing every instrument!
             As Poetkoe I can also make any kinds of artistic decisions I feel like making.
           </p>
           <p>
             Not to sound too anti-social: Poetkoe is just one of the musical endeavours of mine. I have
             played in different bands doing weddings and other cover gigs for years, focusing mainly on
-            vocals and keys but also occasionally guitar or bass. And our old prog-rock band Ekspansio
+            vocals and keys but also occasionally guitar or bass. I have done lots of acoustic gigs both
+            solo and as a duo with my father. And our old prog-rock band Ekspansio
             in which I sing and play keys has a habbit of making a comeback gig every few years. You can check
             Ekspansio out on <a href="https://soundcloud.com/ekspansio" target="_blank">SoundCloud</a>.
           </p>
-          <p>
-            Listing all of my gear would be pointless, but here are the most crucial items:
+
+          <button type="button" id="gear-toggle" onClick={this.showGear}>My gear</button>
+          <div id="gear">
+            <p>
+              Listing all of my gear would be pointless, but here are the most crucial items:
+            </p>
             <ul className="gearlist">
               <li>MacBook</li>
               <li>GarageBand</li>
               <li>M-Audio Fast Track Pro USB audio interface</li>
-              <li>Ibanez ARC500 electric guitar</li>
-              <li>Ibanez EWsomething acoustic guitar, I'll have to look it up</li>
+              <li>Ibanez electric and acoustic guitars</li>
               <li>Yamaha BB450 bass (true vintage from 1979!)</li>
               <li>Clavia Nord Electro 2 keyboard</li>
               <li>Miditech Midistart 3 MIDI keyboard</li>
               <li>sE Electronics Magneto condenser microphone</li>
             </ul>
-          </p>
-
+            <p>
+              I use mainly GarageBand's built-in amp models and effects when recording guitar and bass. Also
+              mainly GarageBand's built-in synths and effects. I like to think of it as a challenge: how far
+              can I push the boundaries of the software? So far it has worked surprisingly well even for mixing
+              and mastering.
+            </p>
+            <p>
+              However there is one third party AU plug-in that I use in every project, and that is the <a
+              href="http://loudmax.blogspot.fi/" target="_blank">LoudMax</a> brickwall limiter/ loudness maximizer
+              created by Thomas Mundt. So simple and works like a charm, would totally recommend.
+            </p>
+          </div>
 
         </div>
       </div>
