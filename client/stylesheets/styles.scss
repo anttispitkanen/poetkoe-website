@@ -1,5 +1,8 @@
+$bright-orange:   #FC8C3F;
+
 * {
   box-sizing: border-box;
+
 }
 
 html {
@@ -7,23 +10,35 @@ html {
   min-height: 100%;
 }
 
-html, body, #react-root, .main-layout {
+body {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  margin: 0 0 0 0;
+  font-family: 'Open Sans', 'Droid Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*
+body, #react-root, .main-layout {
   height: 100%;
   font-family: sans-serif;
   margin: 0 0 0 0;
 }
+*/
 
-
-.main-layout {
+#react-root, .main-layout {
+  /*max-height: 100%;
+  min-height: 100%;*/
   height: 100%;
-  min-height: 100%;
+  width: 100%;
   overflow: scroll;
-  position: relative;
+  /*position: relative;*/
+  position: absolute;
   background-image: url("images/teddy.jpg");
-  background-size: 100% auto;
-  width: auto;
-  min-width: 800px;
-
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -108,15 +123,17 @@ main {
   }
 
   .single-post {
-    background-color: #FDFDFD;
+    /*background-color: #FDFDFD;*/
+    background-color: white;
     margin: 2em 0 1em 0;
     list-style-type: none;
     padding: 10px 10px 10px;
     box-shadow: 3px 3px 3px #999;
     border-radius: 5px;
 
+
+/*This is a cool effect in the index view I guess but affects displaying a single post where it insufferable.*/
 /*
-This is a cool effect in the index view I guess but affects displaying a single post where it insufferable.
     &:hover {
       box-shadow: 13px 13px 10px #BBB;
       transform: translate(-10px, -10px);
@@ -127,6 +144,8 @@ This is a cool effect in the index view I guess but affects displaying a single 
     h2 {
       padding: 0 0 0 0;
       margin: 0 0 0 0;
+      color: $bright-orange;
+      font-weight: 300;
     }
 
     a {
@@ -139,7 +158,7 @@ This is a cool effect in the index view I guess but affects displaying a single 
     }
 
     .back {
-      color: #FC7B23;
+      color: $bright-orange;
 
       &:hover {
         color: #FFBA7D;
@@ -164,9 +183,9 @@ This is a cool effect in the index view I guess but affects displaying a single 
 }
 
 .home-wrapper, .bio-wrapper, .games-wrapper {
-  background-color: #FDFDFD;
+  background-color: white;
   width: 100%;
-  max-width: 800px;
+  /*max-width: 800px;*/
   height: auto;
   border-radius: 5px;
   padding-top: 30px;
@@ -221,7 +240,8 @@ This is a cool effect in the index view I guess but affects displaying a single 
     height: 40px;
     width: 80px;
     /*background-color: rgba(252,130,35, 0.5);*/
-    background-color: #FFBA7D;
+    /*background-color: #FFBA7D;*/
+    background-color: $bright-orange;
     margin: 10px 60px 0px;
     border: none;
     border-radius: 4px;
@@ -240,7 +260,7 @@ This is a cool effect in the index view I guess but affects displaying a single 
     margin: -4px 40px 10px;
     padding: 20px 0;
     border-radius: 5px;
-    border: 4px solid #FFBA7D;
+    border: 4px solid $bright-orange;
     display: none;
   }
 
@@ -288,7 +308,7 @@ This is a cool effect in the index view I guess but affects displaying a single 
     height: 520px;
     background-color: #DDD;
     margin: 50px auto;
-    border: 3px solid #FC7B23;
+    border: 3px solid $bright-orange;
     border-radius: 3px;
   }
 
@@ -296,14 +316,13 @@ This is a cool effect in the index view I guess but affects displaying a single 
     width: 50px;
     height: 50px;
     border: 1px solid #FFBA7D;
-    background-color: #FC7B23;
+    background-color: $bright-orange;
     float: left;
     clear: right;
 
     img {
       width: 50px;
       height: 50px;
-      /*border-radius: 100px;*/
     }
 
     &:hover {
@@ -316,17 +335,13 @@ This is a cool effect in the index view I guess but affects displaying a single 
     width: 50px;
     height: 50px;
     border: 1px solid #FFBA7D;
-    background-color: #FC7B23;
+    background-color: $bright-orange;
     float: left;
     clear: right;
     text-align: center;
 
     &:hover {
       background-color: #FFBA7D;
-    }
-
-    p {
-
     }
 
   }
