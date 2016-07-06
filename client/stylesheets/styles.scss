@@ -1,4 +1,8 @@
-$bright-orange:   #FC8C3F;
+$bright-orange:     #FC8C3F;
+$light-orange:      #FFBA7D;
+$transparent-black: rgba(0, 0, 0, 0.7);
+$nav-highlight:     rgba(120, 120, 120, 0.6);
+
 
 * {
   box-sizing: border-box;
@@ -43,7 +47,7 @@ body, #react-root, .main-layout {
 
 header {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $transparent-black;
   color: white;
   display: block;
   top: 0;
@@ -79,7 +83,7 @@ header {
 
       &:hover {
         background-color: #666;
-        background-color: rgba(120, 120, 120, 0.6);
+        background-color: $nav-highlight;
       }
     }
 
@@ -123,7 +127,6 @@ main {
   }
 
   .single-post {
-    /*background-color: #FDFDFD;*/
     background-color: white;
     margin: 2em 0 1em 0;
     list-style-type: none;
@@ -161,7 +164,7 @@ main {
       color: $bright-orange;
 
       &:hover {
-        color: #FFBA7D;
+        color: $light-orange;
         text-decoration: underline;
       }
     }
@@ -214,10 +217,10 @@ main {
 
   a {
     text-decoration: none;
-    color: #FC7B23;
+    color: $bright-orange;
 
     &:hover {
-      color: #FFBA7D;
+      color: $light-orange;
     }
   }
 
@@ -304,8 +307,8 @@ main {
   }
 
   .poetkoesweeper-grid {
-    width: 520px;
-    height: 520px;
+    width: 506px;
+    height: 506px;
     background-color: #DDD;
     margin: 50px auto;
     border: 3px solid $bright-orange;
@@ -315,7 +318,7 @@ main {
   .mine {
     width: 50px;
     height: 50px;
-    border: 1px solid #FFBA7D;
+    border: 1px solid $light-orange;
     background-color: $bright-orange;
     float: left;
     clear: right;
@@ -326,7 +329,7 @@ main {
     }
 
     &:hover {
-      background-color: #FFBA7D;
+      background-color: $light-orange;
     }
   }
 
@@ -334,14 +337,14 @@ main {
   .empty-square {
     width: 50px;
     height: 50px;
-    border: 1px solid #FFBA7D;
+    border: 1px solid $light-orange;
     background-color: $bright-orange;
     float: left;
     clear: right;
     text-align: center;
 
     &:hover {
-      background-color: #FFBA7D;
+      background-color: $light-orange;
     }
 
   }
@@ -360,7 +363,7 @@ h1 {
 
 
 footer {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $transparent-black;
   width: 100%;
   height: 100px;
   margin-top: -100px;
@@ -369,7 +372,6 @@ footer {
   clear: both;
 
   .footer-links {
-
     width: 150px;
     margin: 0 0 0 0;
     float: left;
