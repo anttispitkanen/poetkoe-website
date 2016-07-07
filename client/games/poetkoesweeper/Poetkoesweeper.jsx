@@ -88,7 +88,7 @@ export default class Poetkoesweeper extends TrackerReact(Component) {
     let components = this.countMines();
 
     return(
-      <div>
+      <div className="poetkoesweeper-game">
         <h3>There are {this.state.numMines} cats to avoid disturbing</h3>
         <div className="poetkoesweeper-grid">
           {components.map( (component) => {

@@ -42,6 +42,7 @@ export default class Blog extends TrackerReact(Component) {
 
     return(
       <div className="content-wrapper">
+
         <h1>Blog</h1>
         <PostForm />
         <input className="search-box"
@@ -56,6 +57,7 @@ export default class Blog extends TrackerReact(Component) {
             return <Post key={post._id} post={post} />
           })}
         </ul>
+
       </div>
     )
   }

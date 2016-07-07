@@ -16,7 +16,7 @@ export default class Bio extends Component {
 
     return(
       <div className="content-wrapper">
-        <div className="bio-wrapper">
+
           <h1>Bio</h1>
 
           <img className="bio-pic" src="/images/smiling-poetkoe.jpg" />
@@ -78,7 +78,7 @@ export default class Bio extends Component {
             </p>
           </div>
 
-        </div>
+
       </div>
     )
   }

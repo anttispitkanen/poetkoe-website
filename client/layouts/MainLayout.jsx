@@ -15,6 +15,12 @@ export const MainLayout = ({content}) => (
         <a href="/"><img src="images/poetkoe.png" /></a>
       </nav>
     </header>
+    <div className="banner">
+      <div className="pic-and-logo">
+        <img className="poetkoe-pic" src="images/face.jpg" />
+        <img className="main-logo" src="images/poetkoe-black.png" />
+      </div>
+    </div>
     <main>
       {content}
     </main>

@@ -8,10 +8,10 @@ export default class Home extends Component {
 
   render() {
     return(
+
       <div className="content-wrapper">
-        <div className="home-wrapper">
-          <img className="poetkoe-pic" src="images/face.jpg" />
-          <img className="main-logo" src="images/poetkoe-black.png" />
+
+
           <h2>Welcome to Poetkoe's website!</h2>
           <p>
             I'm Antti "Poetkoe" Pitkänen, a musician and producer from Tampere, Finland.
@@ -27,7 +27,7 @@ export default class Home extends Component {
           </p>
           <h4>Try the Poetkoe namegenerator!</h4>
           <Namegenerator />
-        </div>
+
       </div>
     )
   }
