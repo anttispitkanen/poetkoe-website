@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 export default class EmptySquare extends Component {
+  expose() {
+    document.getElementById(this.props.id).className = "exposed-empty-square";
+  }
+
   render() {
 
     let minesTouching = "";
@@ -9,7 +13,7 @@ export default class EmptySquare extends Component {
     }
 
     return(
-      <div className="empty-square">{minesTouching}</div>
+      <div className="empty-square" id={this.props.id} onClick={this.expose.bind(this)}><p>{minesTouching}</p></div>
     )
   }
 }

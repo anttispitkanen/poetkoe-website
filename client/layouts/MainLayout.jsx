@@ -2,29 +2,28 @@ import React from 'react';
 
 export const MainLayout = ({content}) => (
   <div className="main-layout">
-    <header>
+    <header className="banner">
       <nav>
-        <div></div>
+        <div id="menu-icon" className="menu-icon"><i id="menu-icon-toggle" className="fa fa-bars"></i></div>
+        <ul id="main-navigation" className="main-navigation">
 
-        <div><a href="/">Home</a></div>
-        <div><a href="/bio">Bio</a></div>
-        <div><a href="/music">Music</a></div>
-        <div><a href="/blog">Blog</a></div>
-        <div><a href="/games">Games</a></div>
+          <a href="/"><li>Home</li></a>
+          <a href="/bio"><li>Bio</li></a>
+          <a href="/music"><li>Music</li></a>
+          <a href="/blog"><li>Blog</li></a>
+          <a href="/games"><li>Games</li></a>
+        </ul>
 
-        <a href="/"><img src="images/poetkoe.png" /></a>
       </nav>
+
+      <div className="header-logo"><a href="/"><img src="images/poetkoe-white.png" /></a></div>
+
     </header>
-    <div className="banner">
-      <div className="pic-and-logo">
-        <img className="poetkoe-pic" src="images/face.jpg" />
-        <img className="main-logo" src="images/poetkoe-black.png" />
-      </div>
-    </div>
+
     <main>
       {content}
     </main>
-    <footer>
+    <footer className="clearfix">
       <div className="footer-links">
         <ul>
           <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank">YouTube</a></li>
@@ -40,5 +39,8 @@ export const MainLayout = ({content}) => (
       </div>
 
     </footer>
+
   </div>
+
+
 )
