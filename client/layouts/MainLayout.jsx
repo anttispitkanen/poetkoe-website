@@ -3,7 +3,15 @@ import React from 'react';
 export const MainLayout = ({content}) => (
   <div className="main-layout">
     <header className="banner">
-      <nav>
+      <nav className="clearfix">
+
+        <ul className="social-media-icon-links">
+          <li><a href="https://www.soundcloud.com/poetkoe" target="_blank"><i className="fa fa-soundcloud"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank"><i className="fa fa-youtube"></i></a></li>
+          <li><a href="https://www.facebook.com/poetkoemusic" target="_blank"><i className="fa fa-facebook-official"></i></a></li>
+          <li><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i></a></li>
+        </ul>
+
         <div id="menu-icon" className="menu-icon"><i id="menu-icon-toggle" className="fa fa-bars"></i></div>
         <ul id="main-navigation" className="main-navigation">
 
@@ -17,6 +25,7 @@ export const MainLayout = ({content}) => (
       </nav>
 
       <div className="header-logo"><a href="/"><img src="images/poetkoe-white.png" /></a></div>
+      <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
 
     </header>
 
@@ -25,11 +34,11 @@ export const MainLayout = ({content}) => (
     </main>
     <footer className="clearfix">
       <div className="footer-links">
-        <ul>
-          <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank">YouTube</a></li>
-          <li><a href="https://soundcloud.com/poetkoe" target="_blank">SoundCloud</a></li>
-          <li><a href="https://www.facebook.com/poetkoemusic" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/poetkoe/" target="_blank">Instagram</a></li>
+        <ul className="clearfix">
+          <li><a href="https://www.soundcloud.com/poetkoe" target="_blank"><i className="fa fa-soundcloud"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank"><i className="fa fa-youtube"></i></a></li>
+          <li><a href="https://www.facebook.com/poetkoemusic" target="_blank"><i className="fa fa-facebook-official"></i></a></li>
+          <li><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i></a></li>
         </ul>
       </div>
 
