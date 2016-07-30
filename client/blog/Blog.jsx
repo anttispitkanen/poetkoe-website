@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import PostForm from './PostForm.jsx';
 import Post from './Post.jsx';
+import Blogbanner from './Blogbanner.jsx';
 
 Posts = new Mongo.Collection("posts");
 
@@ -42,8 +43,9 @@ export default class Blog extends TrackerReact(Component) {
 
     return(
       <div className="content-wrapper">
+        <Blogbanner />
 
-        <h1>Blog</h1>
+        <h1><i className="fa fa-pencil-square-o"></i> Blog</h1>
         <PostForm />
         <input className="search-box"
             type="text-area"

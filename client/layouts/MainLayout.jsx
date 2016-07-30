@@ -2,32 +2,25 @@ import React from 'react';
 
 export const MainLayout = ({content}) => (
   <div className="main-layout">
-    <header className="banner">
-      <nav className="clearfix">
 
-        <ul className="social-media-icon-links">
-          <li><a href="https://www.soundcloud.com/poetkoe" target="_blank"><i className="fa fa-soundcloud"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank"><i className="fa fa-youtube"></i></a></li>
-          <li><a href="https://www.facebook.com/poetkoemusic" target="_blank"><i className="fa fa-facebook-official"></i></a></li>
-          <li><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i></a></li>
-        </ul>
+    <nav className="clearfix">
 
-        <div id="menu-icon" className="menu-icon"><i id="menu-icon-toggle" className="fa fa-bars"></i></div>
-        <ul id="main-navigation" className="main-navigation">
+      <ul className="social-media-icon-links">
+        <li><a href="https://www.soundcloud.com/poetkoe" target="_blank"><i className="fa fa-soundcloud"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank"><i className="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/poetkoemusic" target="_blank"><i className="fa fa-facebook-official"></i></a></li>
+        <li><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i></a></li>
+      </ul>
 
-          <a href="/"><li>Home</li></a>
-          <a href="/bio"><li>Bio</li></a>
-          <a href="/music"><li>Music</li></a>
-          <a href="/blog"><li>Blog</li></a>
-          <a href="/games"><li>Games</li></a>
-        </ul>
+      <div id="menu-icon" className="menu-icon"><i id="menu-icon-toggle" className="fa fa-bars"></i></div>
+      <ul id="main-navigation" className="main-navigation">
 
-      </nav>
+        <a href="/"><li>Home</li></a>
+        <a href="/blog"><li>Blog</li></a>
+        <a href="/games"><li>Games</li></a>
+      </ul>
 
-      <div className="header-logo"><a href="/"><img src="images/poetkoe-white.png" /></a></div>
-      <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
-
-    </header>
+    </nav>
 
     <main>
       {content}

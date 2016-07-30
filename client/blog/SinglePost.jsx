@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import Blogbanner from './Blogbanner.jsx';
 
 export default class SinglePost extends TrackerReact(Component) {
 
@@ -32,6 +33,7 @@ export default class SinglePost extends TrackerReact(Component) {
     return(
 
       <div className="content-wrapper">
+        <Blogbanner />
 
         <ul class="blog-posts">
           <li className="single-post">

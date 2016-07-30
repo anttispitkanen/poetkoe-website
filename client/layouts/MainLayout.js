@@ -6,6 +6,10 @@ Template.body.events({
 
   'click #main-navigation': function() {
     this.classList.toggle("main-navigation-showing");
+  },
+
+  'click #instavideo': function() {
+    this.play();
   }
 
 });
