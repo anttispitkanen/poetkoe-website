@@ -393,8 +393,9 @@ main {
     transform: translateX(-50%);
     color: white;
     font-size: 1.3em;
-    font-weight: 400;
+    font-weight: 600;
     -webkit-font-smoothing: antialiased;
+    text-shadow: 0px 0px 1px $transparent-black;
   }
 
   img {
@@ -766,6 +767,10 @@ main {
     font-weight: 300;
   }
 
+}
+
+.banner, .soundcloud, .instagram, .facebook, footer {
+  box-shadow: 0px 0px 9px 0px black;
 }
 
 //Homepage components end

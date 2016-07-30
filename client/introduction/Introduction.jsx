@@ -13,7 +13,7 @@ export default class Introduction extends Component {
 
           <p>
             I write, play, record, produce and publish all my music myself. I enjoy playing the guitar, bass and keys as well as singing and rapping.
-            I also do all the electronics and programming myself. I don't play drums but I try to make up for it by beatboxing when necessary.
+            I also do all the electronics and programming. I don't play drums but I try to make up for it by beatboxing when necessary.
           </p>
 
           <iframe width="560" height="315" src="https://www.youtube.com/embed/UsjgVvDZ2Kk" frameborder="0" allowfullscreen></iframe>

@@ -25,7 +25,6 @@ export default class Instagram extends Component {
     } else {
       instavideo.pause();
     }
-
   }
 
 
@@ -40,9 +39,13 @@ export default class Instagram extends Component {
 
         <div className="instagram-text">
           <h2><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i> Instagram</a></h2>
-          <p>My YouTube channel is focused more on live recorded versions of my songs.</p>
-          <p>There is also some exclusive content. Like this rap anthem that I made for the basketball team Ponteva from Hyvinkää, my original home town.</p>
-          <p>Click <a href="https://www.instagram.com/poetkoe" target="_blank">here</a> to visit my channel!</p>
+          <p>
+            My posts on Instagram are mainly about well-being and feeling good.
+            That means it's mostly about music, exercise (calisthenics and mobility work are my favorites) and cats.
+            The cat you can see in most pics is Maisa, she lives with my parents.
+          </p>
+          <p>Besides music, working out and cats I also like coffee, bunnies, Moomin, cartoons and web comics.</p>
+          <p><a href="https://www.instagram.com/poetkoe" target="_blank">Here</a> you can see all of my posts.</p>
         </div>
 
         {window.addEventListener('scroll', this.checkScroll, false)}

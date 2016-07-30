@@ -18,6 +18,10 @@ export default class Soundcloud extends Component {
             a harmonica melody to wrap everything together.
             Just listen if you don't believe me!
           </p>
+          <p>
+            On the cover you can see Bolt of the awesome <a href="https://www.instagram.com/boltandkeel/"
+            target="_blank">Bolt and Keel</a> since they were kind enough to let me use their picture.
+          </p>
           <p>Find the rest of my music <a href="https://www.soundcloud.com/poetkoe" target="_blank">here</a>.</p>
         </div>
       </div>
