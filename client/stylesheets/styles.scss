@@ -758,7 +758,12 @@ main {
     padding-right: 0px;
     background-color: $bright-orange;
     color: white;
-
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0px $transparent-black;
+    &:hover {
+      transform: translate(0, -5px);
+      box-shadow: 0px 7px 10px 0px $transparent-black;
+    }
   }
 
   .hint {
@@ -809,8 +814,9 @@ main {
     transform: translateX(-50%);
     color: white;
     font-size: 1.3em;
-    font-weight: 400;
+    font-weight: 600;
     -webkit-font-smoothing: antialiased;
+    text-shadow: 0px 0px 1px $transparent-black;
   }
 
   img {
