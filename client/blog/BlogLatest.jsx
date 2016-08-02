@@ -40,9 +40,9 @@ export default class BlogLatest extends TrackerReact(Component) {
       <div className="blog-latest">
 
         <div className="blog-latest-text">
-          <h2><a href="/blog"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
+          <h2><a href="/blog#"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
           <p>This is my latest blog post.</p>
-          <p>See all of my blog posts <a href="/blog">here</a>.</p>
+          <p>See all of my blog posts <a href="/blog#">here</a>.</p>
         </div>
 
         <ul className="blog-posts">

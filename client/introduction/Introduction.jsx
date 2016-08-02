@@ -12,22 +12,18 @@ export default class Introduction extends Component {
           </p>
 
           <p>
-            I write, play, record, produce and publish all my music myself. I enjoy playing the guitar, bass and keys as well as singing and rapping.
-            I also do all the electronics and programming. I don't play drums but I try to make up for it by beatboxing when necessary.
+            I write, play, record, produce and publish all my music myself.
+            I enjoy playing the guitar, bass and keys as well as singing, rapping and occasional beatboxing.
+            I also do all the electronics and programming.
           </p>
 
           <iframe width="560" height="315" src="https://www.youtube.com/embed/UsjgVvDZ2Kk" frameborder="0" allowfullscreen></iframe>
 
           <p>
-            Doing everything myself has its advantages – I get to have all the fun of playing every instrument!
-            As Poetkoe I can also make any kinds of artistic decisions I feel like making.
-            I listen to all kinds of music, so I find it natural not to limit myself to any single genre when making music.
-          </p>
-
-          <p>
             You can show support by listening on <a href="https://soundcloud.com/poetkoe"
             target="_blank">SoundCloud</a> or <a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw"
-            target="_blank">YouTube</a>. Or give a thumbs up on <a href="https://www.facebook.com/poetkoemusic"
+            target="_blank">YouTube</a>. Take a peek on <a href="https://www.instagram.com/poetkoe" target="_blank">
+            Instagram</a> or give a thumbs up on <a href="https://www.facebook.com/poetkoemusic"
             target="_blank">Facebook</a> if you feel like it!
           </p>
         </div>
