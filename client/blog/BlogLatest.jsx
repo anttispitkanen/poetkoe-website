@@ -1,54 +1,75 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import {Session} from 'meteor/session';
 import Post from './Post.jsx';
 import Blog from './Blog.jsx';
+import LatestPost from './LatestPost.jsx';
 
+PublishedBlogPosts = new Mongo.Collection(null);
 
 export default class BlogLatest extends TrackerReact(Component) {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      subscription: {
-        latestPost: Meteor.subscribe("allPosts")
-      }
-    };
-  }
-
-  componentWillUnmount() {
-    this.state.subscription.latestPost.stop();
-  }
-
-  //Return latest blogpost
-  post() {
-    //console.log(Posts.findOne());
-    return Posts.find().fetch().reverse()[0];
-    //return Posts.findOne();
-  }
-
-
-
-  render() {
-    let latestPost = {};
-
-    if (this.post()) {
-      latestPost = this.post();
-      console.log(latestPost);
+        this.state = {
+            subscription: {
+                publishedBlogPosts: Meteor.subscribe("publishedBlogPosts")
+            }
+        };
     }
 
-    return(
-      <div className="blog-latest">
+    componentWillUnmount() {
+        this.state.subscription.publishedBlogPosts.stop();
+    }
 
-        <div className="blog-latest-text">
-          <h2><a href="/blog#"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
-          <p>This is my latest blog post.</p>
-          <p>See all of my blog posts <a href="/blog#">here</a>.</p>
-        </div>
+/*
+    //Return latest blogposts
+    posts() {
+        console.log("täällä clientin metodissa publishedBlogPosts on: " + PublishedBlogPosts.find().fetch());
+        return PublishedBlogPosts.find().fetch();
+    }
+*/
 
-        <ul className="blog-posts">
-          <Post key={latestPost._id} post={latestPost} />
-        </ul>
-      </div>
-    )
-  }
+    //this one uses Meteor methods
+    posts() {
+
+        Meteor.call("fetchLatestBlogposts", function(err, result) {
+            if (err) {
+                console.log("joku virhe: " + err);
+                return "";
+            }
+
+            if (result) {
+                console.log("tässä pitäisi tulla tulokset");
+                console.log(result);
+                return result;
+            }
+            console.log("ei ollu resulttia");
+        });
+    }
+
+
+    render() {
+
+        let latestPosts = this.posts();
+        console.log(latestPosts);
+
+        if (latestPosts === undefined) {
+            return(<h2>Loading...</h2>);
+        }
+
+        return(
+            <div className="blog-latest">
+
+                <div className="blog-latest-text">
+                    <h2><a href="/blog#"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
+                    <p>These are my latest blog posts.</p>
+                    <p>See all of my blog posts <a href="/blog#">here</a>.</p>
+                    {console.log(latestPosts)}
+                </div>
+
+
+            </div>
+        )
+    }
 }

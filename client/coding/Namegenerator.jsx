@@ -19,6 +19,10 @@ export default class Namegenerator extends TrackerReact(Component) {
     event.preventDefault();
     let originalName = this.state.originalName.toUpperCase();
     let poetkoeifiedName = originalName.replace(/Ä/g, "AE").replace(/Ö/g, "OE").replace(/Ü/g, "UE");
+    if (poetkoeifiedName.length > 25) {
+        let length = poetkoeifiedName.length;
+        poetkoeifiedName = poetkoeifiedName.substr(0, 25) + "-\n" + poetkoeifiedName.substr(25, length);
+    }
     this.setState({poetkoeifiedName: poetkoeifiedName + " :DD"});
     this.setState({originalName: ''});
   }
