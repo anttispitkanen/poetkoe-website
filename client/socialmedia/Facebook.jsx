@@ -14,7 +14,7 @@ export default class Facebook extends Component {
             I use Facebook mainly for sharing my music to people.
             There is also some exclusive content. Like this video of the time I jammed along to The Last Baron by Mastodon.
           </p>
-          <p>You can find my profile <a href="https://www.facebook.com/poetkoemusic" target="_blank">here</a>.</p>
+          <p><a href="https://www.facebook.com/poetkoemusic" target="_blank">Wow, such content, much exclusive!</a></p>
         </div>
       </div>
     )

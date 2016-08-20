@@ -145,6 +145,7 @@ nav {
       &:hover {
         color: white;
       }
+
     }
   }
 }
@@ -490,11 +491,10 @@ main {
       color: white;
 
       a {
-        //color: rgba(255, 255, 255, 0.8);
-        color: $transparent-black;
+        color: rgba(0, 0, 0, 0.7);
 
         &:hover {
-          color: white;
+          color: black;
         }
       }
     }
@@ -597,10 +597,10 @@ main {
     p {
       color: white;
       a {
-        //color: rgba(255, 255, 255, 0.8);
-        color: $transparent-black;
+        color: rgba(0, 0, 0, 0.7);
+
         &:hover {
-          color: white;
+          color: black;
         }
       }
     }
@@ -687,10 +687,10 @@ main {
     p {
       color: white;
       a {
-        //color: rgba(255, 255, 255, 0.8);
-        color: $transparent-black;
+        color: rgba(0, 0, 0, 0.7);
+
         &:hover {
-          color: white;
+          color: black;
         }
       }
     }

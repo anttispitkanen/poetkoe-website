@@ -27,13 +27,16 @@ Meteor.methods({
         let self = this;
         let feed = require("feed-read");
         let url = "https://www.medium.com/feed/@Poetkoe";
-        let firstThreePosts = [];
+
+
 
         feed(url, function(err, posts) {
-
+            
             if (err) {
                 console.log("There has been an error: " + err);
             }
+
+            let firstThreePosts = [];
 
             for(let i = 0; i < 3; i++) {
                 firstThreePosts.push({
@@ -43,11 +46,11 @@ Meteor.methods({
                     "link": posts[i].link
                 });
             }
-            console.log(firstThreePosts + "\nsiinä ne ny olis");
+            //console.log(firstThreePosts + "\nsiinä ne ny olis");
             //session.set("firstThreePosts", firstThreePosts);
 
             //return ("kukkuu " + firstThreePosts);
-            return "kukkuu serveriltä";
+            //return "kukkuu serveriltä";
 
         });
 

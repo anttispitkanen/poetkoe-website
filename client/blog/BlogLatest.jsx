@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import {Session} from 'meteor/session';
-import Post from './Post.jsx';
-import Blog from './Blog.jsx';
 import LatestPost from './LatestPost.jsx';
 
 PublishedBlogPosts = new Mongo.Collection(null);
@@ -62,9 +60,9 @@ export default class BlogLatest extends TrackerReact(Component) {
             <div className="blog-latest">
 
                 <div className="blog-latest-text">
-                    <h2><a href="/blog#"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
+                    <h2><a href="https://www.medium.com/@Poetkoe" target="_blank"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
                     <p>These are my latest blog posts.</p>
-                    <p>See all of my blog posts <a href="/blog#">here</a>.</p>
+                    <p>You can find my blog on <a href="https://www.medium.com/@Poetkoe" target="_blank">Medium</a>.</p>
                     {console.log(latestPosts)}
                 </div>
 

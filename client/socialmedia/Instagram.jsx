@@ -44,8 +44,8 @@ export default class Instagram extends Component {
             That means it's mostly about music, exercise (calisthenics and mobility work are my favorites) and cats.
             The cat you can see in most pics is Maisa, she lives with my parents.
           </p>
-          <p>Besides music, working out and cats I also like comedy, coffee, bunnies, Moomin, cartoons and web comics.</p>
-          <p><a href="https://www.instagram.com/poetkoe" target="_blank">Here</a> you can see all of my posts.</p>
+          <p>I also like coffee, bunnies, Moomin, cartoons and web comics.</p>
+          <p><a href="https://www.instagram.com/poetkoe" target="_blank">There's cats and stuff!</a></p>
         </div>
 
         {window.addEventListener('scroll', this.checkScroll, false)}

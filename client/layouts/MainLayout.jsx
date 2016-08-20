@@ -38,12 +38,12 @@ export const MainLayout = ({content}) => (
 
             <div className="copyright-and-contact">
                 © 2016 <a href="https://github.com/anttispitkanen" target="_blank">Antti Pitkänen</a> <br/>
-            <a href="mailto:poetkoeofficial@gmail.com">poetkoeofficial@gmail.com</a>
-        </div>
+                <a href="mailto:poetkoeofficial@gmail.com">poetkoeofficial@gmail.com</a>
+            </div>
 
-    </footer>
+        </footer>
 
-</div>
+    </div>
 
 
 )
