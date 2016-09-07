@@ -23,37 +23,47 @@ Meteor.methods({
 
 
     fetchLatestBlogposts() {
-
-        let self = this;
         let feed = require("feed-read");
         let url = "https://www.medium.com/feed/@Poetkoe";
+        let firstPosts = ["kukkuu"];
+        let Promise = require("bluebird");
+        /*
+        promiseFunction() {
+            return new Promise( (resolve, reject) => {
+                setTimeout( () => {
+                    resolve();
+                }, 3000);
+            })
+        }
+
+        getKukkuu() {
+            return promiseFunction().then( () => {
+                return "kukkuu";
+            })
+        }
+        */
+        //return firstPosts;
 
 
-
-        feed(url, function(err, posts) {
-            
+        return feed(url, function(err, posts) {
             if (err) {
                 console.log("There has been an error: " + err);
             }
 
-            let firstThreePosts = [];
-
-            for(let i = 0; i < 3; i++) {
-                firstThreePosts.push({
+            for(let i = 0; i < 2; i++) {
+                firstPosts.push({
                     "title": posts[i].title,
                     "content": posts[i].content,
                     "published": posts[i].published,
                     "link": posts[i].link
                 });
             }
-            //console.log(firstThreePosts + "\nsiinä ne ny olis");
-            //session.set("firstThreePosts", firstThreePosts);
-
-            //return ("kukkuu " + firstThreePosts);
-            //return "kukkuu serveriltä";
-
+            console.log("hello from server" +firstPosts);
+            return firstPosts;
         });
 
-        //return("kukkuu! serveriltä päivää!" + firstThreePosts);
+/*
+
+*/
     }
 });

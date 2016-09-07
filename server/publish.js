@@ -21,7 +21,7 @@ Meteor.publish("publishedBlogPosts", function() {
             console.log("There has been an error: " + err);
         }
 
-        for(let i = 0; i < 3; i++) {
+        for(let i = 0; i < 2; i++) {
             firstThreePosts.push({
                 "title": posts[i].title,
                 "content": posts[i].content,
