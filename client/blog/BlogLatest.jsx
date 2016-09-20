@@ -17,6 +17,7 @@ export default class BlogLatest extends TrackerReact(Component) {
     componentDidMount() {
         let self = this;
         this.posts(self);
+        //this.tryThisPosts(self);
         /*
         this.getJeppisjepulis().then( (jee) => {
             self.setState({posts: jee});
@@ -28,19 +29,20 @@ export default class BlogLatest extends TrackerReact(Component) {
         });
         */
     }
-    /*
-    componentWillMount() {
-        this.setState(freshBlogPost = Meteor.call("fetchLatestBlogposts", (error, result) => {
-            if(error) {
-                console.log("Errori!!! " + error);
+
+    tryThisPosts(self) {
+        Meteor.apply("fetchLatestBlogposts", [], {wait: true}, (err, result) => {
+            if (err) {
+                console.log("error in client: " + err);
             }
-            if(result) {
+            if (result) {
                 console.log(result);
-                return result;
+                self.setState({posts: result});
+            } else {
+                console.log("no result found :(");
             }
-        }))
+        });
     }
-    */
 
 
 
@@ -55,11 +57,31 @@ export default class BlogLatest extends TrackerReact(Component) {
                 console.log(result);
                 self.setState({posts: result});
                 //return result;
+            } else {
+                console.log("no result found");
             }
-            console.log("no result found");
-            return("abc");
         });
     }
+
+/*
+    async asyncPosts(self) {
+        let result = await this.callMeteorMethod("fetchLatestBlogposts");
+        //console.log(result);
+        self.setState({posts: result});
+    }
+
+    callMeteorMethod(methodName, ...args) {
+        return new Promise((resolve, reject) => {
+            Meteor.call(methodName, ...args, (error, result) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(result);
+                }
+            })
+        })
+    }
+*/
 
 
 
@@ -81,21 +103,23 @@ export default class BlogLatest extends TrackerReact(Component) {
 
 
     render() {
-
         return(
             <div className="blog-latest">
                 <div className="blog-latest-text">
                     <h2><a href="https://www.medium.com/@Poetkoe" target="_blank"><i className="fa fa-pencil-square-o"></i> Blog</a></h2>
-                    <p>These are my latest blog posts.</p>
-                    <p>You can find my blog on <a href="https://www.medium.com/@Poetkoe" target="_blank">Medium</a>.</p>
-                    <p>{this.state.posts}</p>
+                    <p>These are my latest blog posts. You can find my blog on <a href="https://www.medium.com/@Poetkoe" target="_blank">Medium</a>.</p>
+                    <ul>
+                        {this.state.posts.map((post) => {
+                            return <LatestPost post={post} key={post.published} className="latest-posts" />
+                        })}
+                    </ul>
                     {console.log("UI " + this.state.posts)}
                 </div>
             </div>
         )
     }
 }
-
+//<p>{this.state.posts}</p>
 /*
 let latestPosts = this.posts();
 console.log(latestPosts);

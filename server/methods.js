@@ -1,3 +1,20 @@
+/*
+let feed = require("feed-read");
+let url = "https://www.medium.com/feed/@Poetkoe";
+let firstPosts = ["kukkuu"];
+let Promise = require("bluebird");
+
+feed(url, function(err, posts) {
+    if (err) {
+        console.log("There has been an error: " + err);
+    }
+
+
+    return posts;
+    console.log(posts);
+});
+*/
+
 Meteor.methods({
     addPost(heading, post) {
 
@@ -25,45 +42,42 @@ Meteor.methods({
     fetchLatestBlogposts() {
         let feed = require("feed-read");
         let url = "https://www.medium.com/feed/@Poetkoe";
-        let firstPosts = ["kukkuu"];
-        let Promise = require("bluebird");
-        /*
-        promiseFunction() {
-            return new Promise( (resolve, reject) => {
-                setTimeout( () => {
-                    resolve();
-                }, 3000);
-            })
-        }
+        let firstPosts = [];
+        let Future = require("fibers/future");
+        let future = new Future();
+        //let Promise = require("bluebird");
 
-        getKukkuu() {
-            return promiseFunction().then( () => {
-                return "kukkuu";
-            })
-        }
-        */
-        //return firstPosts;
-
-
-        return feed(url, function(err, posts) {
+        feed(url, (err, posts) => {
             if (err) {
                 console.log("There has been an error: " + err);
+            } else {
+                for(let i = 0; i < 2; i++) {
+                    firstPosts.push({
+                        "title": posts[i].title,
+                        "content": posts[i].content,
+                        "published": posts[i].published,
+                        "link": posts[i].link
+                    });
+                }
+                future.return(firstPosts);
             }
-
-            for(let i = 0; i < 2; i++) {
-                firstPosts.push({
-                    "title": posts[i].title,
-                    "content": posts[i].content,
-                    "published": posts[i].published,
-                    "link": posts[i].link
-                });
-            }
-            console.log("hello from server" +firstPosts);
-            return firstPosts;
         });
 
-/*
+        return future.wait();
 
-*/
+        /*
+        for(let i = 0; i < 2; i++) {
+            firstPosts.push({
+                "title": posts[i].title,
+                "content": posts[i].content,
+                "published": posts[i].published,
+                "link": posts[i].link
+            });
+        }
+        console.log("hello from server" +firstPosts);
+        */
+
+
     }
+
 });
