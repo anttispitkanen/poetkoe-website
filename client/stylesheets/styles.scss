@@ -1,14 +1,11 @@
-/*$bright-orange:     #FC8C3F;*/
-//$bright-orange:     #FC7B23;
-//$bright-orange:       #FE611A;
+
 $bright-purple:         #A907B8;
 $transparent-purple:    rgba(169,7,184, 0.8);
 $background-purple:     #D007E3;
-//$transparent-orange:  rgba(254,97,26, 0.8);
-$light-orange:          #FFBA7D;
+
 $transparent-black:     rgba(0, 0, 0, 0.4);
 $transparent-white:     rgba(255, 255, 255, 0.85);
-$nav-highlight:         rgba(120, 120, 120, 0.6);
+
 
 
 //heading colors
@@ -18,8 +15,6 @@ $dark-purple-heading-hover: #960AA3;
 //text colors
 $text-on-purple:    #EEE;
 $text-on-light:     #444;
-
-
 
 $content-max-width: 700px;
 
@@ -69,7 +64,6 @@ body {
   height: 100%;
   min-height: 100%;
 }
-
 
 .main-layout {
   height: 100%;
@@ -168,8 +162,6 @@ main {
   min-height: auto;
   margin-bottom: 100px;
 }
-
-
 
 .content-wrapper {
   height: auto;
@@ -287,36 +279,42 @@ main {
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+/* COMMON FOR ALL CONTENT COMPONENTS */
+
+.introduction, .soundcloud, .youtube, .instagram, .blog-latest, .facebook {
+    padding: 40px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .introduction-text, .soundcloud-text, .youtube-text, .instagram-text, .facebook-text {
+        display: inline-block;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 /* INTRODUCTION */
 
 .introduction {
-  padding: 40px 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-
-  .homepage-pic {
-    max-width: 200px;
-    max-height: 200px;
-    height: auto;
-    border-radius: 100%;
-  }
-
-  .introduction-text {
-    display: inline-block;
-    padding: 0 10px;
-    width: 100%;
-    max-width: 700px;
-
-    iframe {
-      max-width: 560px;
-      max-height: 315px;
-      width: 100%;
+    .homepage-pic {
+        max-width: 200px;
+        max-height: 200px;
+        height: auto;
+        border-radius: 100%;
     }
 
-  }
-
+    iframe {
+        max-width: 560px;
+        max-height: 315px;
+        width: 100%;
+    }
 }
 
 
@@ -325,19 +323,6 @@ main {
 /* SOUNDCLOUD */
 
 .soundcloud {
-  width: 100%;
-  background-size: cover;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-
-  .soundcloud-text {
-    display: inline-block;
-    padding: 0 10px;
-    width: 100%;
-    max-width: 700px;
-  }
-
   iframe {
     max-width: 400px;
     max-height: 400px;
@@ -353,18 +338,6 @@ main {
 /* YOUTUBE */
 
 .youtube {
-  width: 100%;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-
-  .youtube-text {
-    display: inline-block;
-    padding: 0 10px;
-    width: 100%;
-    max-width: 700px;
-  }
-
   iframe {
     width: 100%;
     max-width: 400px;
@@ -382,18 +355,6 @@ main {
 /* INSTAGRAM */
 
 .instagram {
-  padding: 40px 0;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-
-  .instagram-text {
-    width: 100%;
-    max-width: 700px;
-    display: inline-block;
-    padding: 0 10px;
-  }
-
   video {
     display: inline-block;
     max-height: 400px;
@@ -410,10 +371,6 @@ main {
 /* BLOG */
 
 .blog-latest {
-  width: 100%;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
 
   .blog-latest-text {
     display: inline-block;
@@ -440,21 +397,17 @@ main {
           h3 {
               font-style: italic;
           }
-
           p {
               color: #666;
           }
-
           .read-more {
               float: left;
           }
-
           .timestamp {
               float: right;
               color: #666;
               font-style: italic;
           }
-
       }
   }
 }
@@ -465,19 +418,6 @@ main {
 /* FACEBOOK */
 
 .facebook {
-  width: 100%;
-  background-size: cover;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-
-  .facebook-text {
-    display: inline-block;
-    padding: 0 10px;
-    width: 100%;
-    max-width: 700px;
-  }
-
   iframe {
     width: 100%;
     max-width: 400px;
@@ -507,7 +447,6 @@ main {
       max-width: 700px;
       margin: 0 auto;
     }
-
   }
 
   .coding-icon {
@@ -566,7 +505,6 @@ main {
     color: #999;
     font-weight: 300;
   }
-
 }
 
 
