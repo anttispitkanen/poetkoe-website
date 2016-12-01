@@ -249,7 +249,7 @@ main {
   background-attachment: fixed;
 
   .header-logo {
-    height: 100px;
+    height: 120px;
     width: 80%;
     max-width: 500px;
     position: absolute;
@@ -257,6 +257,10 @@ main {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 7;
+    background-image: url("images/poetkoe-white.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .header-slogan {
@@ -315,7 +319,6 @@ main {
 
 .soundcloud {
   width: 100%;
-  background-color: $bright-purple;
   background-size: cover;
   padding: 40px 0;
   display: flex;
@@ -326,18 +329,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 700px;
-
-    p {
-      color: $text-on-purple;
-
-      a {
-        color: $dark-purple-heading;
-
-        &:hover {
-          color: $dark-purple-heading-hover;
-        }
-      }
-    }
   }
 
   iframe {
@@ -376,7 +367,6 @@ main {
 
 .instagram {
   padding: 40px 0;
-  background-color: $bright-purple;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -386,16 +376,6 @@ main {
     max-width: 700px;
     display: inline-block;
     padding: 0 10px;
-
-    p {
-      color: $text-on-purple;
-      a {
-        color: $dark-purple-heading;
-        &:hover {
-          color: $dark-purple-heading-hover;
-        }
-      }
-    }
   }
 
   video {
@@ -441,7 +421,6 @@ main {
 
 .facebook {
   width: 100%;
-  background-color: $bright-purple;
   background-size: cover;
   padding: 40px 0;
   display: flex;
@@ -452,17 +431,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 700px;
-
-    p {
-      color: $text-on-purple;
-      a {
-        color: $dark-purple-heading;
-
-        &:hover {
-          color: $dark-purple-heading-hover;
-        }
-      }
-    }
   }
 
   iframe {
@@ -554,28 +522,18 @@ main {
 
 
 
-.soundcloud, .instagram, .facebook, footer {
-  background-color: $background-purple;
-  //background-color: #F8F8F8;
-  /*
-  background-image: linear-gradient(
-                      to right,
-                      #FEE101, #DDC120
-                    );
-  */
-  background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
-  //background-image: linear-gradient(to right, #DA57E6, $bright-purple);
-}
 
 
 
 
-
-
-
-/* Footer intended to stay at the bottom */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/* FOOTER */
 
 footer {
+  background-color: $background-purple;
+  background-image: linear-gradient(to right, #DA57E6, $bright-purple);
   background-size: cover;
   width: 100%;
   height: auto;
@@ -632,6 +590,12 @@ footer {
   }
 
 }
+/* FOOTER */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -640,9 +604,37 @@ footer {
 /* FILLER IMAGES */
 
 .filler-image {
-    background-color: yellow;
-    height: 40px;
+    height: 500px;
+    width: 100vw;
+    background-size: cover;
+    background-position: top;
+    background-size: cover;
 }
+.gig-poetkoe {
+    background-image: url("images/fillers/gig-poetkoe.png");
+}
+.hat-glasses {
+    background-image: url("images/fillers/hatglasses.png");
+}
+.musa-corner {
+    background-image: url("images/fillers/musacorner.png");
+}
+.muumi {
+    background-image: url("images/fillers/muumi.png");
+}
+.statue {
+    background-image: url("/images/fillers/statue.png");
+}
+.teddy {
+    background-image: url("images/fillers/teddy.png");
+}
+
+/* FILLER IMAGES */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
@@ -650,7 +642,6 @@ footer {
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 /* Media queries */
-
 
 @media screen and (max-width: 800px) {
 
@@ -688,6 +679,14 @@ footer {
     }
   }
 
+  .banner {
+      background-image: url("images/tablet/peeking-poetkoe-bright-tablet.png");
+  }
+
+  .header-logo {
+    background-image: url("images/tablet/poetkoe-white-tablet.png");
+  }
+
   .content-wrapper {
     .introduction, .youtube, .soundcloud, .instagram, .blog-latest, .facebook, .coding {
       display: block;
@@ -702,6 +701,33 @@ footer {
   .coding .output {
     margin: 10px auto;
   }
+
+  .filler-image {
+      height: 400px;
+      width: 100vw;
+      background-size: cover;
+      background-position: top;
+      background-size: cover;
+  }
+  .gig-poetkoe {
+      background-image: url("images/tablet/gig-poetkoe-tablet.png");
+  }
+  .hat-glasses {
+      background-image: url("images/tablet/hatglasses-tablet.png");
+  }
+  .musa-corner {
+      background-image: url("images/tablet/musacorner-tablet.png");
+  }
+  .muumi {
+      background-image: url("images/tablet/muumi-tablet.png");
+  }
+  .statue {
+      background-image: url("/images/tablet/statue-tablet.png");
+  }
+  .teddy {
+      background-image: url("images/tablet/teddy-tablet.png");
+  }
+
 
 
   footer {
@@ -727,5 +753,18 @@ footer {
     }
   }
 
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .banner {
+        background-image: url("images/mobile/peeking-poetkoe-bright-mobile.png");
+    }
+
+    .header-logo {
+        background-image: url("images/mobile/poetkoe-white-small.png");
+    }
 
 }

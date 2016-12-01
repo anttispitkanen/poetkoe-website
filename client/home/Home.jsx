@@ -9,34 +9,55 @@ import Facebook from '../socialmedia/Facebook.jsx';
 import Instagram from '../socialmedia/Instagram.jsx';
 import Coding from '../coding/Coding.jsx';
 
+import Face from '../fillers/Face';
+import GigPoetkoe from '../fillers/GigPoetkoe';
+import HatGlasses from '../fillers/HatGlasses';
+import MusaCorner from '../fillers/MusaCorner';
+import Muumi from '../fillers/Muumi';
 import Statue from '../fillers/Statue';
+import Teddy from '../fillers/Teddy';
+
+
+
+
+
 
 
 export default class Home extends Component {
 
-  render() {
-    return(
+    render() {
+        return(
 
-      <div className="content-wrapper">
-        <Banner />
+            <div className="content-wrapper">
+                <Banner />
 
-        <Introduction />
+                <Introduction />
 
-        <Statue />
+                <Statue />
 
-        <Soundcloud />
+                <Soundcloud />
 
-        <Youtube />
+                <Teddy />
 
-        <Instagram />
+                <Youtube />
 
-        <BlogLatest />
+                <GigPoetkoe />
 
-        <Facebook />
+                <Instagram />
 
-        <Coding />
+                <Muumi />
 
-      </div>
-    )
-  }
+                <BlogLatest />
+
+                <MusaCorner />
+
+                <Facebook />
+
+                <HatGlasses />
+
+                <Coding />
+
+            </div>
+        )
+    }
 }
