@@ -15,7 +15,7 @@ export default class Coding extends Component {
           </p>
         </div>
 
-        <i className="fa fa-code"></i>
+        <i className="coding-icon fa fa-code"></i>
 
         <h4>Try the Poetkoe namegenerator!</h4>
         <Namegenerator />

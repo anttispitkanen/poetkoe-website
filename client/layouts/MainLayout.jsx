@@ -16,7 +16,7 @@ export const MainLayout = ({content}) => (
             <div id="menu-icon" className="menu-icon"><i id="menu-icon-toggle" className="fa fa-bars"></i></div>
             <ul id="main-navigation" className="main-navigation">
 
-                <a href="/"><li>Home</li></a>
+                <a href="#Home"><li>Home</li></a>
                 <a href="https://www.medium.com/@Poetkoe" target="_blank"><li>Blog</li></a>
             </ul>
 

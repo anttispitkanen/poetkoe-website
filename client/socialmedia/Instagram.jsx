@@ -40,11 +40,10 @@ export default class Instagram extends Component {
         <div className="instagram-text">
           <h2><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i> Instagram</a></h2>
           <p>
-            My posts on Instagram are mainly about well-being and feeling good.
-            That means it's mostly about music, exercise (calisthenics and mobility work are my favorites) and cats.
-            The cat you can see in most pics is Maisa, she lives with my parents.
+            My Instagram is mostly about music and exercise (calisthenics and mobility work are my favorites).
+            Maisa the cat has found her way to many pictures as well.
           </p>
-          <p>I also like coffee, bunnies, Moomin, cartoons and web comics.</p>
+          <p>I also like nature, coffee, Moomin, cartoons and comic strips.</p>
           <p><a href="https://www.instagram.com/poetkoe" target="_blank">There's cats and stuff!</a></p>
         </div>
 

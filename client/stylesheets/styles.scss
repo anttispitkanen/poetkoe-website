@@ -2,7 +2,8 @@
 //$bright-orange:     #FC7B23;
 //$bright-orange:       #FE611A;
 $bright-orange:       #A907B8;
-$transparent-orange:  rgba(169,7,184, 0.8);
+$bright-purple:       #A907B8;
+$transparent-purple:  rgba(169,7,184, 0.8);
 //$transparent-orange:  rgba(254,97,26, 0.8);
 $light-orange:        #FFBA7D;
 $transparent-black:   rgba(0, 0, 0, 0.4);
@@ -16,7 +17,7 @@ $dark-purple-heading-hover: #960AA3;
 
 //text colors
 $text-on-purple:    #EEE;
-$text-on-light:     #333;
+$text-on-light:     #444;
 
 
 
@@ -39,7 +40,6 @@ $content-max-width: 700px;
 
 * {
   box-sizing: border-box;
-  //-webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -58,9 +58,9 @@ body {
   font-family: 'Open Sans', 'Droid Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  //background-color: honeydew;
-  background-color: #EEE;
+  background-color: #F8F8F8;
   color: $text-on-light;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -85,12 +85,10 @@ nav {
 
   .social-media-icon-links {
     height: 100%;
-    //width: auto;
     margin: 0;
     padding: 0;
     padding-left: 10px;
     float:left;
-    //background-color: yellow;
     z-index: 9;
 
     li {
@@ -146,7 +144,6 @@ nav {
     -ms-transition: max-height 0.4s;
     -o-transition: max-height 0.4s;
     transition: max-height 0.4s;
-    -webkit-font-smoothing: antialiased;
     z-index: 8;
 
     li {
@@ -166,25 +163,18 @@ nav {
 }
 
 
-
-
-
-
 main {
   height: auto;
-  /*min-height: 100%;*/
   min-height: auto;
   margin-bottom: 100px;
 }
 
 
-/* Content wrapper that defines the maximum content width */
 
 .content-wrapper {
   height: auto;
   min-height: 100%;
   width: 100%;
-  //max-width: $content-max-width;
   margin: 0 auto;
 
 
@@ -197,9 +187,7 @@ main {
 /* General settings */
 
   h1 {
-    //color: #555;
-    color: $bright-orange;
-    //text-shadow: 1px 1px 1px #999;
+    color: $bright-purple;
     font-size: 4em;
     margin: 0 0 0 0;
     text-align: center;
@@ -210,16 +198,14 @@ main {
     text-align: center;
     margin-top: 0;
     padding-top: 10px;
-    //margin-bottom: 20px;
+    color: $dark-purple-heading;
   }
 
   a {
     text-decoration: none;
-    color: $transparent-orange;
     color: $dark-purple-heading;
 
     &:hover {
-      color: $bright-orange;
       color: $dark-purple-heading-hover;
     }
   }
@@ -245,143 +231,6 @@ main {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-  .bio-pic {
-    width: 200px;
-    height: auto;
-    margin: 20px auto 40px;
-    display: block;
-  }
-
-
-/* Gearlist */
-
-  #gear-toggle {
-    height: 40px;
-    width: 80px;
-    background-color: $bright-orange;
-    margin: 10px 60px 0px;
-    border: none;
-    border-radius: 4px;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-    }
-  }
-
-  #gear {
-    margin: -4px 10px 10px;
-    padding: 20px 0;
-    border-radius: 5px;
-    border: 4px solid $bright-orange;
-    display: none;
-  }
-
-  .gearlist {
-    margin-left: 80px;
-  }
-
-/* Gear ends */
-
-/* Poetkoe namegenerator */
-
-
-/* Namegenerator ends */
-
-
-/* Poetkoesweeper */
-
-  .poetkoesweeper-grid {
-    width: 506px;
-    height: 506px;
-    background-color: #EEE;
-    margin: 50px auto;
-    border: 3px solid $bright-orange;
-    border-radius: 3px;
-    display: none;
-  }
-
-  .mine {
-    width: 50px;
-    height: 50px;
-    border: 1px solid $light-orange;
-    background-color: $bright-orange;
-    float: left;
-    clear: right;
-
-    img {
-      width: 50px;
-      height: 50px;
-      display: none;
-    }
-  }
-
-  .exposed-mine {
-    width: 50px;
-    height: 50px;
-    border: 1px solid $light-orange;
-    float: left;
-    clear: right;
-
-    img {
-      height: 50px;
-      width: 50px;
-      display: block;
-    }
-  }
-
-  .empty-square {
-    width: 50px;
-    height: 50px;
-    border: 1px solid $light-orange;
-    background-color: $bright-orange;
-    float: left;
-    clear: right;
-    text-align: center;
-
-    p {
-      display: none;
-    }
-
-
-  }
-
-  .exposed-empty-square {
-    width: 50px;
-    height: 50px;
-    border: 1px solid $light-orange;
-    background-color: inherit;
-    float: left;
-    clear: right;
-    text-align: center;
-
-    p {
-      display: block;
-    }
-  }
-
-  .game-info {
-    width: 506px;
-    height: 506px;
-    background-color: #DDD;
-    margin: 50px auto;
-    border: 3px solid $bright-orange;
-    border-radius: 3px;
-  }
-
-/* Poetkoesweeper ends */
-
-
-
-
-
-
-/* Blog settings */
-
 
 
 
@@ -391,19 +240,13 @@ main {
 .banner {
   width: 100%;
   height: 100vh;
+  position: relative;
+  top: 0px;
 
-  //old
-  //background-image: url("/images/teddy.jpg");
-  //background-size: cover;
-
-  //new
   background-image: url("/images/peeking-poetkoe-bright.png");
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-
-  position: relative;
-  top: 0px;
 
   .header-logo {
     height: 100px;
@@ -426,7 +269,6 @@ main {
     color: white;
     font-size: 1.3em;
     font-weight: 600;
-    -webkit-font-smoothing: antialiased;
     text-shadow: 0px 0px 1px $transparent-black;
   }
 
@@ -435,8 +277,6 @@ main {
   }
 
 }
-
-
 
 
 
@@ -461,32 +301,21 @@ main {
     width: 100%;
     max-width: 700px;
 
-    h2 {
-      text-align: center;
-      color: $bright-orange;
-    }
-
     iframe {
       max-width: 560px;
       max-height: 315px;
       width: 100%;
     }
 
-    p {
-      /*position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);*/
-
-    }
   }
 
 }
 
 
+
 .soundcloud {
   width: 100%;
-  background-color: $bright-orange;
-  //background-image: url("/images/yellow-texture.png");
+  background-color: $bright-purple;
   background-size: cover;
   padding: 40px 0;
   display: flex;
@@ -497,16 +326,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 700px;
-    -webkit-font-smoothing: antialiased;
-
-    h2 {
-      a {
-        color: $dark-purple-heading;
-        &:hover {
-          color: $dark-purple-heading-hover;
-        }
-      }
-    }
 
     p {
       color: $text-on-purple;
@@ -533,10 +352,7 @@ main {
 
 .youtube {
   width: 100%;
-  //height: auto;
-  //background-color: $bright-orange;
   padding: 40px 0;
-  //text-align: center;
   display: flex;
   justify-content: center;
 
@@ -545,27 +361,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 700px;
-    -webkit-font-smoothing: antialiased;
-
-    h2 {
-      a {
-        color: $transparent-orange;
-
-        &:hover {
-          color: $bright-orange;
-        }
-      }
-    }
-
-    p {
-      a {
-        color: $transparent-orange;
-
-        &:hover {
-          color: $bright-orange;
-        }
-      }
-    }
   }
 
   iframe {
@@ -581,8 +376,7 @@ main {
 
 .instagram {
   padding: 40px 0;
-  //background-color: $bright-orange;
-  //background-image: url("/images/yellow-texture.png");
+  background-color: $bright-purple;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -592,18 +386,6 @@ main {
     max-width: 700px;
     display: inline-block;
     padding: 0 10px;
-    -webkit-font-smoothing: antialiased;
-
-    h2 {
-      text-align: center;
-      a {
-        i {
-          font-size: 1em;
-          padding: 0;
-          color: inherit;
-        }
-      }
-    }
 
     p {
       color: $text-on-purple;
@@ -638,17 +420,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 300px;
-    -webkit-font-smoothing: antialiased;
-
-    h2 {
-      a {
-        color: $transparent-orange;
-
-        &:hover {
-          color: $bright-orange;
-        }
-      }
-    }
 
     p {
       text-align: center;
@@ -670,7 +441,7 @@ main {
 
 .facebook {
   width: 100%;
-  background-color: $bright-orange;
+  background-color: $bright-purple;
   background-size: cover;
   padding: 40px 0;
   display: flex;
@@ -681,7 +452,6 @@ main {
     padding: 0 10px;
     width: 100%;
     max-width: 700px;
-    -webkit-font-smoothing: antialiased;
 
     p {
       color: $text-on-purple;
@@ -714,16 +484,6 @@ main {
   .coding-text {
     display: inline-block;
 
-    h2 {
-      a {
-        i {
-          font-size: 1em;
-          padding: 0;
-          color: inherit;
-        }
-      }
-    }
-
     p {
       padding: 10px 10px;
       width: 100%;
@@ -733,14 +493,15 @@ main {
 
   }
 
-  i {
-    color: $transparent-orange;
+  .coding-icon {
+    color: $transparent-purple;
     font-size: 6em;
     padding: 0 20px;
   }
 
   h4 {
     margin-top: 20px;
+    color: $text-on-light;
   }
 
   .poetkoe-namegenerator-input {
@@ -769,12 +530,11 @@ main {
     max-width: 670px;
     min-width: 200px;
     line-height: 1.5em;
-    font-weight: 300;
     border-radius: 5px;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: $bright-orange;
-    background-image: linear-gradient(to right, #DA57E6, $transparent-orange);
+    background-color: $bright-purple;
+    background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
     color: $text-on-purple;
     cursor: pointer;
     box-shadow: 0px 2px 5px 0px $transparent-black;
@@ -793,136 +553,25 @@ main {
 }
 
 .banner, .soundcloud, .instagram, .facebook, footer {
-  //box-shadow: 0px 0px 9px 0px black;
+
 
 }
 
 .soundcloud, .instagram, .facebook, footer {
-  background-color: honeydew;
+  //background-color: $bright-purple;
+  //background-color: #F8F8F8;
   /*
   background-image: linear-gradient(
                       to right,
                       #FEE101, #DDC120
                     );
   */
-  background-image: linear-gradient(to right, #DA57E6, $transparent-orange);
-}
-//rgba(231,187,51, 0.7), rgb(221,187,51)
-//#DDC120, rgba(254,97,26, 0.7)
-
-//Homepage components end
-
-
-
-
-
-//Blog components start
-
-.blog-banner {
-  width: 100%;
-  height: 300px;
-  background-image: url("/images/teddybanner2.png");
-  background-size: cover;
-  position: relative;
-  top: 0px;
-
-  .header-logo {
-    height: 100px;
-    width: 80%;
-    max-width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -55%);
-    z-index: 7;
-  }
-
-  .header-slogan {
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 1.3em;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 0px 0px 1px $transparent-black;
-  }
-
-  img {
-    width: 100%;
-  }
-
+  //background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
+  //background-image: linear-gradient(to right, #DA57E6, $bright-purple);
 }
 
-.blog-posts {
-  padding-left: 0;
-  margin: 0;
-}
 
-.single-post {
-  width: 100%;
-  max-width: $content-max-width;
-  margin: 0 auto;
-  border-top: 1px dotted #666;
-  list-style-type: none;
-  padding: 10px 20px 10px;
 
-  h2 {
-    padding: 10px 0;
-    margin: 0 0 0 0;
-    color: $bright-orange;
-    font-weight: 300;
-    text-align: left;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: $light-orange;
-    }
-  }
-
-  p {
-    margin: 0;
-    padding: 0 0 30px;
-  }
-
-  .back {
-    color: $bright-orange;
-
-    &:hover {
-      color: $light-orange;
-      text-decoration: underline;
-    }
-  }
-}
-
-.timestamp {
-  display: block;
-  text-align: right;
-  color: #999;
-
-  &:first-letter {
-    text-transform: capitalize;
-  }
-}
-
-.timestamp-and-signature {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  color: #999;
-
-  &:first-letter {
-    text-transform: capitalize;
-  }
-}
-
-//Blog components end
 
 
 
@@ -930,8 +579,7 @@ main {
 /* Footer intended to stay at the bottom */
 
 footer {
-  //background-color: $bright-orange;
-  //background-image: url("/images/yellow-texture.png");
+  background-color: $bright-purple;
   background-size: cover;
   width: 100%;
   height: auto;
@@ -976,7 +624,6 @@ footer {
     color: $transparent-white;
     float: right;
     font-weight: 500;
-    -webkit-font-smoothing: antialiased;
 
     a {
       text-decoration: none;
