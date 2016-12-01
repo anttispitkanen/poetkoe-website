@@ -9,6 +9,17 @@ $transparent-black:   rgba(0, 0, 0, 0.4);
 $transparent-white:   rgba(255, 255, 255, 0.85);
 $nav-highlight:       rgba(120, 120, 120, 0.6);
 
+
+//heading colors
+$dark-purple-heading:       #7C0487;
+$dark-purple-heading-hover: #960AA3;
+
+//text colors
+$text-on-purple:    #EEE;
+$text-on-light:     #333;
+
+
+
 $content-max-width: 700px;
 
 
@@ -47,7 +58,9 @@ body {
   font-family: 'Open Sans', 'Droid Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background-color: honeydew;
+  //background-color: honeydew;
+  background-color: #EEE;
+  color: $text-on-light;
 }
 
 
@@ -178,7 +191,9 @@ main {
 
 
 
-
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 /* General settings */
 
   h1 {
@@ -201,9 +216,11 @@ main {
   a {
     text-decoration: none;
     color: $transparent-orange;
+    color: $dark-purple-heading;
 
     &:hover {
       color: $bright-orange;
+      color: $dark-purple-heading-hover;
     }
   }
 
@@ -223,6 +240,9 @@ main {
 }
 
 /* General settings end */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 
   .bio-pic {
@@ -481,25 +501,21 @@ main {
 
     h2 {
       a {
-        //color: rgba(255, 255, 255, 0.8);
-        color: $transparent-orange;
+        color: $dark-purple-heading;
         &:hover {
-          //color: white;
-          color: $bright-orange;
+          color: $dark-purple-heading-hover;
         }
       }
     }
 
     p {
-      color: white;
+      color: $text-on-purple;
 
       a {
-        //color: rgba(0, 0, 0, 0.7);
-        color: $transparent-orange;
+        color: $dark-purple-heading;
 
         &:hover {
-          //color: black;
-          color: $bright-orange;
+          color: $dark-purple-heading-hover;
         }
       }
     }
@@ -542,8 +558,6 @@ main {
     }
 
     p {
-      color: black;
-
       a {
         color: $transparent-orange;
 
@@ -567,8 +581,8 @@ main {
 
 .instagram {
   padding: 40px 0;
-  background-color: $bright-orange;
-  background-image: url("/images/yellow-texture.png");
+  //background-color: $bright-orange;
+  //background-image: url("/images/yellow-texture.png");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -582,15 +596,7 @@ main {
 
     h2 {
       text-align: center;
-      color: $transparent-orange;
-
       a {
-        color: $transparent-orange;
-
-        &:hover {
-          color: $bright-orange;
-        }
-
         i {
           font-size: 1em;
           padding: 0;
@@ -600,12 +606,11 @@ main {
     }
 
     p {
-      color: white;
+      color: $text-on-purple;
       a {
-        color: $transparent-orange;
-
+        color: $dark-purple-heading;
         &:hover {
-          color: $bright-orange;
+          color: $dark-purple-heading-hover;
         }
       }
     }
@@ -666,10 +671,8 @@ main {
 .facebook {
   width: 100%;
   background-color: $bright-orange;
-  background-image: url("/images/yellow-texture.png");
   background-size: cover;
   padding: 40px 0;
-  //text-align: center;
   display: flex;
   justify-content: center;
 
@@ -680,22 +683,13 @@ main {
     max-width: 700px;
     -webkit-font-smoothing: antialiased;
 
-    h2 {
-      a {
-        color: $transparent-orange;
-        &:hover {
-          color: $bright-orange;
-        }
-      }
-    }
-
     p {
-      color: white;
+      color: $text-on-purple;
       a {
-        color: $transparent-orange;
+        color: $dark-purple-heading;
 
         &:hover {
-          color: $bright-orange;
+          color: $dark-purple-heading-hover;
         }
       }
     }
@@ -721,16 +715,7 @@ main {
     display: inline-block;
 
     h2 {
-      text-align: center;
-      color: $bright-orange;
-
       a {
-        color: $transparent-orange;
-
-        &:hover {
-          color: $bright-orange;
-        }
-
         i {
           font-size: 1em;
           padding: 0;
@@ -745,10 +730,10 @@ main {
       max-width: 700px;
       margin: 0 auto;
     }
+
   }
 
   i {
-    //color: $bright-orange;
     color: $transparent-orange;
     font-size: 6em;
     padding: 0 20px;
@@ -773,6 +758,7 @@ main {
     border-radius: 0;
     outline: none;
     text-align: center;
+    color: $text-on-light;
   }
 
   .output {
@@ -787,12 +773,9 @@ main {
     border-radius: 5px;
     padding-left: 0px;
     padding-right: 0px;
-    //background-color: $bright-orange;
-    //background-color: $transparent-orange;
+    background-color: $bright-orange;
     background-image: linear-gradient(to right, #DA57E6, $transparent-orange);
-    //background-color: #999;
-    //background-image: linear-gradient(to right, #D6C422, #DDC120);
-    color: white;
+    color: $text-on-purple;
     cursor: pointer;
     box-shadow: 0px 2px 5px 0px $transparent-black;
     &:hover {
@@ -1008,6 +991,13 @@ footer {
 }
 
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/* Media queries */
+
+
 @media screen and (max-width: 800px) {
 
   nav {
@@ -1048,12 +1038,15 @@ footer {
     .introduction, .youtube, .soundcloud, .instagram, .blog-latest, .facebook, .coding {
       display: block;
       text-align: center;
+      .homepage-pic {
+          margin-bottom: 20px;
+      }
 
     }
   }
 
   .coding .output {
-    margin: 10px;
+    margin: 10px auto;
   }
 
 
