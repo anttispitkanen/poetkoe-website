@@ -1,14 +1,14 @@
 /*$bright-orange:     #FC8C3F;*/
 //$bright-orange:     #FC7B23;
 //$bright-orange:       #FE611A;
-$bright-orange:       #A907B8;
-$bright-purple:       #A907B8;
-$transparent-purple:  rgba(169,7,184, 0.8);
+$bright-purple:         #A907B8;
+$transparent-purple:    rgba(169,7,184, 0.8);
+$background-purple:     #D007E3;
 //$transparent-orange:  rgba(254,97,26, 0.8);
-$light-orange:        #FFBA7D;
-$transparent-black:   rgba(0, 0, 0, 0.4);
-$transparent-white:   rgba(255, 255, 255, 0.85);
-$nav-highlight:       rgba(120, 120, 120, 0.6);
+$light-orange:          #FFBA7D;
+$transparent-black:     rgba(0, 0, 0, 0.4);
+$transparent-white:     rgba(255, 255, 255, 0.85);
+$nav-highlight:         rgba(120, 120, 120, 0.6);
 
 
 //heading colors
@@ -552,13 +552,10 @@ main {
 
 }
 
-.banner, .soundcloud, .instagram, .facebook, footer {
 
-
-}
 
 .soundcloud, .instagram, .facebook, footer {
-  //background-color: $bright-purple;
+  background-color: $background-purple;
   //background-color: #F8F8F8;
   /*
   background-image: linear-gradient(
@@ -566,7 +563,7 @@ main {
                       #FEE101, #DDC120
                     );
   */
-  //background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
+  background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
   //background-image: linear-gradient(to right, #DA57E6, $bright-purple);
 }
 
@@ -579,7 +576,6 @@ main {
 /* Footer intended to stay at the bottom */
 
 footer {
-  background-color: $bright-purple;
   background-size: cover;
   width: 100%;
   height: auto;
@@ -635,6 +631,17 @@ footer {
     }
   }
 
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/* FILLER IMAGES */
+
+.filler-image {
+    background-color: yellow;
+    height: 40px;
 }
 
 

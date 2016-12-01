@@ -9,6 +9,8 @@ import Facebook from '../socialmedia/Facebook.jsx';
 import Instagram from '../socialmedia/Instagram.jsx';
 import Coding from '../coding/Coding.jsx';
 
+import Statue from '../fillers/Statue';
+
 
 export default class Home extends Component {
 
@@ -19,6 +21,8 @@ export default class Home extends Component {
         <Banner />
 
         <Introduction />
+
+        <Statue />
 
         <Soundcloud />
 
