@@ -44,6 +44,51 @@ html {
   padding: 0px;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/* NO-HOVER SETTING FOR TOUCHSCREENS */
+
+html.no-hover {
+    nav li a i:hover {
+        color: $transparent-white;
+    }
+
+    nav .main-navigation li:hover {
+        color: $transparent-white;
+    }
+
+    a:hover {
+        color: $dark-purple-heading;
+    }
+
+    .output:hover {
+        box-shadow: 0px 2px 5px 0px $transparent-black;
+        transform: translate(0, 0);
+    }
+
+    footer ul li a:hover {
+        color: $transparent-white;
+    }
+
+    footer a:hover {
+        color: $transparent-white;
+    }
+
+    .main-navigation li:hover {
+        background-color: $transparent-black;
+    }
+}
+
+
+/* NO-HOVER SETTING FOR TOUCHSCREENS */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
 body {
   position: absolute;
   width: 100%;
@@ -674,7 +719,7 @@ footer {
         width: 100%;
         text-align: right;
         padding: 16px 20px;
-        color: white;
+        color: $transparent-white;
         font-weight: 700;
         text-transform: uppercase;
         border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -780,10 +825,33 @@ footer {
     }
 
     .filler-image {
+        height: 300px;
+        width: 100vw;
+        background-size: cover;
+        background-position: top;
+        background-size: cover;
 
         .quote-container {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
+    }
+    .gig-poetkoe {
+        background-image: url("images/mobile/gig-poetkoe-mobile.png");
+    }
+    .hat-glasses {
+        background-image: url("images/mobile/hatglasses-mobile.png");
+    }
+    .musa-corner {
+        background-image: url("images/mobile/musacorner-mobile.png");
+    }
+    .muumi {
+        background-image: url("images/mobile/muumi-mobile.png");
+    }
+    .statue {
+        background-image: url("/images/mobile/statue-mobile.png");
+    }
+    .teddy {
+        background-image: url("images/mobile/teddy-mobile.png");
     }
 
 }

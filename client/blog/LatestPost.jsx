@@ -24,7 +24,6 @@ export default class LatestPost extends Component {
 
         //date in form of "Sun Sep 25 2016 16:44:09 GMT+0300 (EEST)"
         //so lets start from index 4
-        console.log(this.props.post.published);
         let dateString = this.props.post.published.toString().substr(4);
 
         //we want the "Sep 25 2016" part
