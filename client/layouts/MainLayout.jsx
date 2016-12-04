@@ -31,6 +31,8 @@ export const MainLayout = ({content}) => (
 
         </nav>
 
+        <div className="spinner-test"></div>
+
         <main>
             {content}
         </main>

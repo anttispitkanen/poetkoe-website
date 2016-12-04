@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-import {Session} from 'meteor/session';
+//import {Session} from 'meteor/session';
 import LatestPost from './LatestPost.jsx';
 
 
@@ -34,6 +34,11 @@ export default class BlogLatest extends TrackerReact(Component) {
 
 
     render() {
+
+        if (this.posts.length === 0) {
+            return(<div className="blog-load-spinner"></div>);
+        }
+
         return(
             <div className="blog-latest" id="blog">
                 <div className="blog-latest-text">
