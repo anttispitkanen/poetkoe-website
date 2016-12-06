@@ -11,10 +11,3 @@ Template.body.events({
         this.play();
     }
 });
-
-/*
-Template.body.onRendered = () => {
-    console.log('DOMContentLoaded at ' + new Date());
-    document.getElementById("spinner").className += " hidden";
-}
-*/

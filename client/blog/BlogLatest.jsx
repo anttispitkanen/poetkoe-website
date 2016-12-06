@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-//import {Session} from 'meteor/session';
 import LatestPost from './LatestPost.jsx';
 
 
@@ -54,7 +53,7 @@ export default class BlogLatest extends TrackerReact(Component) {
 
                 <ul className="latest-posts">
                     {this.state.posts.map((post) => {
-                        return <LatestPost post={post} key={post.published} />
+                        return <LatestPost post={post} key={post.postID} />
                     })}
                 </ul>
             </div>
