@@ -17,6 +17,13 @@ export default class BlogLatest extends TrackerReact(Component) {
         this.posts(self);
     }
 
+    //hide the spinner from home page when all the latest posts have loaded and rendered
+    componentDidUpdate() {
+        if (this.state.posts.length >= 3) {
+            document.getElementById("spinner").className += " hidden";
+        }
+    }
+
 
     posts(self) {
         Meteor.call("fetchLatestBlogposts", function(err, result) {
@@ -34,11 +41,6 @@ export default class BlogLatest extends TrackerReact(Component) {
 
 
     render() {
-
-        if (this.posts.length === 0) {
-            return(<div className="blog-load-spinner"></div>);
-        }
-
         return(
             <div className="blog-latest" id="blog">
                 <div className="blog-latest-text">

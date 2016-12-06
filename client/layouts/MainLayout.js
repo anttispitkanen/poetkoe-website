@@ -1,14 +1,20 @@
 Template.body.events({
-  'click #menu-icon': function() {
-    document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
-  },
+    'click #menu-icon': function() {
+        document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
+    },
 
-  'click #main-navigation': function() {
-    this.classList.toggle("main-navigation-showing");
-  },
+    'click #main-navigation': function() {
+        this.classList.toggle("main-navigation-showing");
+    },
 
-  'click #instavideo': function() {
-    this.play();
-  }
-
+    'click #instavideo': function() {
+        this.play();
+    }
 });
+
+/*
+Template.body.onRendered = () => {
+    console.log('DOMContentLoaded at ' + new Date());
+    document.getElementById("spinner").className += " hidden";
+}
+*/

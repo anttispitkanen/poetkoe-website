@@ -863,19 +863,27 @@ footer {
 ////////////////////////////////////////////////////////////////////////////////
 /* JUST TESTING A SPINNER, NOT YET USED ANYWHERE */
 
-/*
-.spinner-test {
-    height: 70px;
-    width: 70px;
+
+.spinner {
     z-index: 100;
     position: absolute;
-    top: 50px;
-    left: 50px;
+    height: 40px;
+    width: 40px;
+    top: 25vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+
     border: 3px solid rgba(255, 255, 255, 0.7);
     border-top: 3px solid $bright-purple;
     border-radius: 100%;
 
     animation: 1s spinner infinite linear;
+}
+
+.spinner.hidden {
+    display: none;
 }
 
 @keyframes spinner {
@@ -886,7 +894,7 @@ footer {
         transform: rotate(360deg);
     }
 }
-*/
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

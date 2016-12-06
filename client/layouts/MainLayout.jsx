@@ -1,11 +1,13 @@
 import React from 'react';
 
-//check for touch screen
+//check for touchscreen
 let touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 //if touchscreen, no hover effect
 if (touchsupport) {
     document.documentElement.className += " no-hover";
 }
+
+
 
 
 export const MainLayout = ({content}) => (
@@ -30,8 +32,6 @@ export const MainLayout = ({content}) => (
             </ul>
 
         </nav>
-
-        <div className="spinner-test"></div>
 
         <main>
             {content}
