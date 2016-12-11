@@ -286,6 +286,8 @@ main {
   background-size: cover;
   background-attachment: fixed;
 
+  transition: height 1s ease;
+
   .header-logo {
     height: 120px;
     width: 80%;
