@@ -4,13 +4,22 @@ import InstagramEmbed from 'react-instagram-embed';
 
 export default class Instagram extends Component {
 
+/*
+    displayEmbed() {
+        document.getElementById('instagram-embed').classList.add('loaded');
+        console.log("ig ladattu");
+    }
+*/
+
     render() {
         return(
             <div id="instagram" className="instagram clearfix">
 
                 <InstagramEmbed
+                    id="instagram-embed"
                     className="instagram-embed"
                     url='https://www.instagram.com/p/BAFIOYokfI8/'
+                    maxWidth={340}
                 />
 
                 <div className="instagram-text">
