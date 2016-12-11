@@ -6,7 +6,7 @@ export default class Banner extends Component {
         return(
             <header className="banner" id="home">
 
-
+                <div id="spinner" className="spinner"></div>
                 <div className="header-logo"></div>
                 <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
 
@@ -14,6 +14,3 @@ export default class Banner extends Component {
         )
     }
 }
-
-
-//<div id="spinner" className="spinner"></div>

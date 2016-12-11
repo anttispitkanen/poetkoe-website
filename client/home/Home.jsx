@@ -20,14 +20,6 @@ import Teddy from '../fillers/Teddy';
 
 
 
-Meteor.startup(() => {
-    ReactDOM.render(<Home />, document.getElementById('render-target'), () => {
-        document.getElementById('spinner').className += " hidden";
-    });
-});
-
-
-
 export default class Home extends Component {
 
     render() {

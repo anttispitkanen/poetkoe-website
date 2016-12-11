@@ -9,7 +9,6 @@ if (touchsupport) {
 
 
 
-
 export const MainLayout = ({content}) => (
     <div className="main-layout">
 
