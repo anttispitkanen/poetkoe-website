@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
 import Banner from './Banner.jsx';
 import Introduction from '../introduction/Introduction.jsx';
@@ -19,7 +20,11 @@ import Teddy from '../fillers/Teddy';
 
 
 
-
+Meteor.startup(() => {
+    ReactDOM.render(<Home />, document.getElementById('render-target'), () => {
+        document.getElementById('spinner').className += " hidden";
+    });
+});
 
 
 

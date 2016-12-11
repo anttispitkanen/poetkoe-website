@@ -17,11 +17,13 @@ export default class BlogLatest extends TrackerReact(Component) {
     }
 
     //hide the spinner from home page when all the latest posts have loaded and rendered
+    /*
     componentDidUpdate() {
         if (this.state.posts.length >= 3) {
             document.getElementById("spinner").className += " hidden";
         }
     }
+    */
 
 
     posts(self) {
