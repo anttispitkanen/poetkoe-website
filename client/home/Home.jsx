@@ -44,15 +44,15 @@ export default class Home extends Component {
 
                 <GigPoetkoe />
 
-                <Instagram />
+                <BlogLatest />
 
                 <Muumi />
 
-                <BlogLatest />
+                <Facebook />
 
                 <MusaCorner />
 
-                <Facebook />
+                <Instagram />
 
                 <HatGlasses />
 

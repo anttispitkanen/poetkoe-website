@@ -33,6 +33,7 @@ export default class Navigation extends React.Component {
                     <a href="#home"><li>Home</li></a>
                     <a href="#soundcloud"><li>Music</li></a>
                     <a href="#blog"><li>Blog</li></a>
+                    <a href="#facebook"><li>Some</li></a>
                 </ul>
 
             </nav>
