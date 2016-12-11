@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "feed-read": "0.0.1",
+    "fibers": "^1.0.15",
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.1.0",
     "react-addons-css-transition-group": "^15.1.0",
