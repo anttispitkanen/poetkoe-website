@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import Navigation from '../navigation/Navigation.jsx';
 import Banner from './Banner.jsx';
 import Introduction from '../introduction/Introduction.jsx';
 import Soundcloud from '../socialmedia/Soundcloud.jsx';
@@ -9,6 +10,7 @@ import BlogLatest from '../blog/BlogLatest.jsx';
 import Facebook from '../socialmedia/Facebook.jsx';
 import Instagram from '../socialmedia/Instagram.jsx';
 import Coding from '../coding/Coding.jsx';
+import Footer from '../footer/Footer.jsx';
 
 import Face from '../fillers/Face';
 import GigPoetkoe from '../fillers/GigPoetkoe';
@@ -26,6 +28,8 @@ export default class Home extends Component {
         return(
 
             <div className="content-wrapper">
+                <Navigation />
+
                 <Banner />
 
                 <Introduction />
@@ -53,6 +57,8 @@ export default class Home extends Component {
                 <HatGlasses />
 
                 <Coding />
+
+                <Footer />
 
             </div>
         )
