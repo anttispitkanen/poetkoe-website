@@ -42,7 +42,7 @@ export default class Instagram extends Component {
         return(
             <div id="instagram" className="instagram clearfix">
 
-                <video id="instavideo" preload="auto" autoplay loop onClick={this.togglePlaying}>
+                <video id="instavideo" preload="auto" loop onClick={this.togglePlaying}>
                     <source src="videos/dips.webm" type="video/webm" />
                     <source src="videos/dips.mp4" type="video/mp4" />
                 </video>
