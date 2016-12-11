@@ -388,11 +388,10 @@ nav {
 /* INSTAGRAM */
 
 .instagram {
-  video {
+  .instagram-embed {
     display: inline-block;
-    max-height: 400px;
-    max-width: 400px;
     width: 100%;
+    max-width: 400px;
     height: auto;
     padding: 10px;
   }
