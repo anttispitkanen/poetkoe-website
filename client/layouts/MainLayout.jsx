@@ -8,6 +8,10 @@ if (touchsupport) {
 }
 
 
+//click events for menu open and close
+//document.getElementById('menu-icon').classList.toggle("main-navigation-showing");
+//document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
+
 
 export const MainLayout = ({content}) => (
     <div className="main-layout">
