@@ -6,8 +6,6 @@ $background-purple:     #D007E3;
 $transparent-black:     rgba(0, 0, 0, 0.4);
 $transparent-white:     rgba(255, 255, 255, 0.85);
 
-
-
 //heading colors
 $dark-purple-heading:       #7C0487;
 $dark-purple-heading-hover: #960AA3;
@@ -263,8 +261,9 @@ nav {
 /* BANNER */
 
 .banner {
+    //banner height defined in jsx to avoid mobile url bar bug
+
   width: 100%;
-  height: 100vh;
   position: relative;
   top: 0px;
 
@@ -274,6 +273,8 @@ nav {
   background-attachment: fixed;
 
   transition: height 1s ease;
+
+
 
   .header-logo {
     height: 120px;
@@ -307,7 +308,9 @@ nav {
     width: 100%;
   }
 
+
 }
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
