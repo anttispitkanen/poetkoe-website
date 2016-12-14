@@ -15,17 +15,13 @@ export default class Banner extends Component {
             let newHeight = window.innerHeight;
             let heightDifference = Math.abs(height - newHeight);
 
-            const HEIGHT_DIFFERENCE_THRESHOLD = 100;
+            const HEIGHT_DIFFERENCE_THRESHOLD = 130;
 
             if (heightDifference > HEIGHT_DIFFERENCE_THRESHOLD) {
                 height = newHeight;
                 document.getElementById("home").style.height = `${height}px`;
             }
         });
-    }
-
-    test() {
-        document.getElementById("soundcloud").scrollIntoView( { behavior: 'smooth' } );
     }
 
 
@@ -35,7 +31,7 @@ export default class Banner extends Component {
 
                 <div id="spinner" className="spinner"></div>
                 <div className="header-logo"></div>
-                <p className="header-slogan" onClick={this.test}>ARTIST /// SONGWRITER /// PRODUCER</p>
+                <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
 
             </header>
         )
