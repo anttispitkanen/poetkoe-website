@@ -31,26 +31,16 @@ export default class Navigation extends React.Component {
 */
 
 
-
-//    componentDidUpdate() {
-        /*
-        if (document.getElementById('main-navigation').classList.contains("main-navigation-showing")) {
-            document.documentElement.onclick = () => {
-                document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
-            }
-        }
-        */
-/*
-        console.log(this.state.menuOpen);
-
-        if (this.state.menuOpen) {
-            document.documentElement.onclick = () => {
-                document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
-            }
-            this.setState( { menuOpen: false } );
+    //if menu is closed, hide the screen-covering phantom-div that listens for click to close menu
+    //if menu is open, open the div
+    componentDidUpdate() {
+        if (!this.state.menuOpen) {
+            document.getElementById('phantom-div').classList.add('hidden');
+        } else {
+            document.getElementById('phantom-div').classList.remove('hidden');
         }
     }
-*/
+
 
     //click at the hamburger menu icon
     toggleNavigationShowing() {
@@ -60,8 +50,19 @@ export default class Navigation extends React.Component {
 
     //closes the navigation dropdown when a list item is clicked
     closeNavigationOnClick() {
-        document.getElementById('main-navigation').classList.toggle("main-navigation-showing");
-        this.setState( { menuOpen: !this.state.menuOpen } );
+        document.getElementById('main-navigation').classList.remove("main-navigation-showing");
+        this.setState( { menuOpen: false } );
+    }
+
+    //closes navigation when clicking outside the nav = on the phantom div
+    closeNavWhenClickedOutside() {
+        document.getElementById('main-navigation').classList.remove("main-navigation-showing");
+        this.setState( { menuOpen: false } );
+    }
+
+
+    scrollTo() {
+
     }
 
 
@@ -81,6 +82,8 @@ export default class Navigation extends React.Component {
                 <div id="menu-icon" onClick={this.toggleNavigationShowing.bind(this)} className="menu-icon">
                     <i id="menu-icon-toggle" className="fa fa-bars"></i>
                 </div>
+
+                <div id="phantom-div" onClick={this.closeNavWhenClickedOutside.bind(this)} className="phantom-div hidden"></div>
 
                 <ul id="main-navigation" onClick={this.closeNavigationOnClick.bind(this)} className="main-navigation">
 

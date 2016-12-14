@@ -8,20 +8,24 @@ export default class Banner extends Component {
         let height = window.innerHeight;
         document.getElementById("home").style.height = `${height}px`;
 
-        //let's only resize the height if it changes by more than HEIGHT_DIFFERENCE_THRESHOLD = 60
+        //let's only resize the height if it changes by more than HEIGHT_DIFFERENCE_THRESHOLD
         //this prevents the mobile browser url bar bug but doesn't prevent resizing e.g. when rotating phone
         window.addEventListener("resize", () => {
 
             let newHeight = window.innerHeight;
             let heightDifference = Math.abs(height - newHeight);
 
-            const HEIGHT_DIFFERENCE_THRESHOLD = 60;
+            const HEIGHT_DIFFERENCE_THRESHOLD = 100;
 
             if (heightDifference > HEIGHT_DIFFERENCE_THRESHOLD) {
                 height = newHeight;
                 document.getElementById("home").style.height = `${height}px`;
             }
         });
+    }
+
+    test() {
+        document.getElementById("soundcloud").scrollIntoView( { behavior: 'smooth' } );
     }
 
 
@@ -31,7 +35,7 @@ export default class Banner extends Component {
 
                 <div id="spinner" className="spinner"></div>
                 <div className="header-logo"></div>
-                <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
+                <p className="header-slogan" onClick={this.test}>ARTIST /// SONGWRITER /// PRODUCER</p>
 
             </header>
         )

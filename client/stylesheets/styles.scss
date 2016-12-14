@@ -77,6 +77,10 @@ html.no-hover {
     .main-navigation li:hover {
         background-color: $transparent-black;
     }
+
+    .homepage-pic:hover {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
 }
 
 /* NO-HOVER SETTING FOR TOUCHSCREENS */
@@ -148,6 +152,21 @@ nav {
           }
         }
     }
+  }
+
+  .phantom-div {
+      //background-color: red;
+      height: 100vh;
+      width: 100vw;
+      z-index: 9;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+
+      &.hidden {
+          display: none;
+      }
   }
 
   .menu-icon {
@@ -267,6 +286,7 @@ nav {
   position: relative;
   top: 0px;
 
+  background-color: #E2C627;
   background-image: url("/images/peeking-poetkoe-bright.png");
   background-position: bottom;
   background-size: cover;
@@ -344,6 +364,13 @@ nav {
         max-height: 200px;
         height: auto;
         border-radius: 100%;
+        border: 0px solid $bright-purple;
+        transition: .7s transform linear;
+
+        &:hover {
+            //spin the poetkoe!
+            transform: rotate3d(0, 0, 1, 360deg);
+        }
     }
 
     iframe {
