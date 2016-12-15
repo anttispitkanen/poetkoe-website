@@ -292,6 +292,10 @@ nav {
   background-size: cover;
   background-attachment: fixed;
 
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -ms-transition: height 1s ease;
+  -o-transition: height 1s ease;
   transition: height 1s ease;
 
 
@@ -365,11 +369,15 @@ nav {
         height: auto;
         border-radius: 100%;
         border: 0px solid $bright-purple;
+        -webkit-transition: .7s transform linear;
+        -moz-transition: .7s transform linear;
+        -ms-transition: .7s transform linear;
+        -o-transition: .7s transform linear;
         transition: .7s transform linear;
 
         &:hover {
             //spin the poetkoe!
-            transform: rotate3d(0, 0, 1, 360deg);
+            transform: rotateZ(360deg);
         }
     }
 
