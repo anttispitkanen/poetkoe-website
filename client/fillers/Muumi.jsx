@@ -7,7 +7,7 @@ export default class Muumi extends Component {
                 <div className="quote-container">
                     <span className="quote">
                         “Without music, life would be a mistake.”
-                    </span><br/><br/>
+                    </span><br/>
                     <span className="quoted-person">―Friedrich Nietzsche</span>
                 </div>
             </div>

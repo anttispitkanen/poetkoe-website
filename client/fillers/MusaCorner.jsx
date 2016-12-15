@@ -7,7 +7,7 @@ export default class MusaCorner extends Component {
                 <div className="quote-container">
                     <span className="quote">
                         “Music is... A higher revelation than all Wisdom & Philosophy.”
-                    </span><br/><br/>
+                    </span><br/>
                     <span className="quoted-person">―Ludwig van Beethoven</span>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 import Navigation from '../navigation/Navigation.jsx';
 import Banner from './Banner.jsx';
@@ -12,7 +11,6 @@ import Instagram from '../socialmedia/Instagram.jsx';
 import Coding from '../coding/Coding.jsx';
 import Footer from '../footer/Footer.jsx';
 
-import Face from '../fillers/Face';
 import GigPoetkoe from '../fillers/GigPoetkoe';
 import HatGlasses from '../fillers/HatGlasses';
 import MusaCorner from '../fillers/MusaCorner';

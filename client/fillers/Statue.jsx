@@ -9,7 +9,7 @@ export default class Statue extends Component {
                         “If I were not a physicist, I would probably be a musician.
                         I often think in music. I live my daydreams in music.
                         I see my life in terms of music.”
-                    </span><br/><br/>
+                    </span><br/>
                     <span className="quoted-person">―Albert Einstein</span>
                 </div>
             </div>

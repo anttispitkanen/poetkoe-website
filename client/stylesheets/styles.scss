@@ -489,10 +489,17 @@ nav {
   .instagram-embed {
     display: inline-block;
     width: 95%;
-    max-width: 400px;
+    max-width: 360px;
     height: 100%;
     margin: 0;
     padding: 10px;
+
+    iframe {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+    }
   }
 }
 
@@ -662,7 +669,6 @@ footer {
     .quote-container {
         color: white;
         font-size: 1.6rem;
-        font-style: italic;
         text-shadow: 2px 2px 2px #666;
         width: 75%;
         text-align: center;
@@ -671,14 +677,13 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -38%);
-
-        .quote {
-
-        }
+        font-family: 'Permanent Marker', cursive;
 
         .quoted-person {
             float: right;
             font-weight: bold;
+            font-size: 1.6rem;
+            padding-top: 15px;
         }
     }
 }
@@ -840,14 +845,18 @@ footer {
     }
 
     .filler-image {
-        height: 300px;
+        height: 370px;
         width: 100vw;
         background-size: cover;
         background-position: top;
         background-size: cover;
 
         .quote-container {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+
+            .quoted-person {
+                font-size: 1.3rem;
+            }
         }
     }
     .gig-poetkoe {
