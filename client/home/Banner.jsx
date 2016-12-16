@@ -4,6 +4,13 @@ import React, {Component} from 'react';
 
 export default class Banner extends Component {
 
+    constructor() {
+        super();
+        this.state = {
+            catShowing: false
+        }
+    }
+
     componentDidMount() {
         let height = window.innerHeight;
         document.getElementById("home").style.height = `${height}px`;
@@ -24,13 +31,38 @@ export default class Banner extends Component {
         });
     }
 
+    //this function shows the hidden cat when the main logo is double clicked
+    //and hides it after six seconds
+    showCat(event) {
+        event.preventDefault();
+
+        if(!this.state.catShowing) {
+            document.getElementById('hidden-cat').classList.remove('hidden');
+            this.setState( { catShowing: true } );
+
+            setTimeout(() => {
+                document.getElementById('hidden-cat').classList.add('hidden');
+                this.setState( { catShowing: false } );
+            }, 6000);
+
+        }
+
+
+    }
+
 
     render() {
         return(
             <header className="banner" id="home">
 
                 <div id="spinner" className="spinner"></div>
-                <div className="header-logo"></div>
+
+                <div id="hidden-cat" className="hidden-cat hidden">
+                    <img src="images/hidden-cat.png"></img>
+                    <p>Meow! You found the hidden cat, congratulations.</p>
+                </div>
+
+                <div className="header-logo" onDoubleClick={this.showCat.bind(this)}></div>
                 <p className="header-slogan">ARTIST /// SONGWRITER /// PRODUCER</p>
 
             </header>
