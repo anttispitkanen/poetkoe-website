@@ -19,6 +19,8 @@ export default class Coding extends Component {
 
         <h4>Try the Poetkoe namegenerator!</h4>
         <Namegenerator />
+
+        <div className="bottom-logo"></div>
       </div>
     )
   }

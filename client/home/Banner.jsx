@@ -59,7 +59,7 @@ export default class Banner extends Component {
 
                 <div id="hidden-cat" className="hidden-cat hidden">
                     <img src="images/hidden-cat.png"></img>
-                    <p>You found the hidden cat :DD Meow! :DD</p>
+                    <p>You found the hidden cat! Meow! :DD</p>
                 </div>
 
                 <div className="header-logo" onDoubleClick={this.showCat.bind(this)}></div>

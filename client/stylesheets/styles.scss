@@ -155,7 +155,6 @@ nav {
     }
 
     .phantom-div {
-        //background-color: red;
         height: 100vh;
         width: 100vw;
         z-index: 9;
@@ -330,20 +329,19 @@ nav {
             padding-top: 2px;
             z-index: 100;
         }
-
     }
 
 
     .header-logo {
-        height: 120px;
-        width: 80%;
-        max-width: 500px;
+        height: 150px;
+        width: 75%;
+        max-width: 600px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 7;
-        background-image: url("images/poetkoe-white.png");
+        background-image: url("images/logos/tussilogo-v-700x218.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -365,8 +363,6 @@ nav {
     img {
         width: 100%;
     }
-
-
 }
 
 
@@ -618,6 +614,18 @@ nav {
         color: #999;
         font-weight: 300;
     }
+
+    .bottom-logo {
+        height: 150px;
+        width: 65%;
+        margin: 20px auto 0px;
+        max-width: 300px;
+        z-index: 7;
+        background-image: url("images/logos/tussilogo-m-500x156.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 
@@ -802,8 +810,8 @@ footer {
         background-image: url("images/tablet/peeking-poetkoe-bright-tablet.png");
     }
 
-    .header-logo {
-        background-image: url("images/tablet/poetkoe-white-tablet.png");
+    .banner .header-logo {
+        background-image: url("images/logos/tussilogo-v-500x156.png");
     }
 
     .content-wrapper {
@@ -882,9 +890,6 @@ footer {
         background-image: url("images/mobile/peeking-poetkoe-bright-mobile.png");
     }
 
-    .header-logo {
-        background-image: url("images/mobile/poetkoe-white-small.png");
-    }
 
     .filler-image {
         height: 370px;
@@ -918,6 +923,10 @@ footer {
     }
     .teddy {
         background-image: url("images/mobile/teddy-mobile.png");
+    }
+
+    .coding .bottom-logo {
+        background-image: url("images/logos/tussilogo-m-300x94.png");
     }
 
 }

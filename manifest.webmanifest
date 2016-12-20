@@ -1,0 +1,41 @@
+{
+    "name": "Poetkoe - ARTIST /// SONGWRITER /// PRODUCER",
+    "short_name": "Poetkoe",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#E2C627",
+    "theme_color": "#E2C627",
+    "description": "The homepage of Poetkoe",
+    "icons": [
+        {
+            "src": "images/icons/tussi-iconi-16x18.png",
+            "sizes": "16x18",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-30x34.png",
+            "sizes": "30x34",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-40x45.png",
+            "sizes": "40x45",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-60x68.png",
+            "sizes": "60x68",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-80x90.png",
+            "sizes": "80x90",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-100x112.png",
+            "sizes": "100x112",
+            "type": "image/png"
+        }, {
+            "src": "images/icons/tussi-iconi-144x162.png",
+            "sizes": "144x162",
+            "type": "image/png"
+        }],
+    "scope": "/"
+}
