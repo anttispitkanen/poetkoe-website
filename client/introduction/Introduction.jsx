@@ -18,7 +18,8 @@ export default class Introduction extends Component {
                         I also do all the electronics and programming.
                     </p>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8oqTery0ELQ" frameborder="0" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VS5YosCbyXM" frameborder="0" allowfullscreen></iframe>
 
                     <p>
                         You can show support by listening on <a href="https://soundcloud.com/poetkoe"

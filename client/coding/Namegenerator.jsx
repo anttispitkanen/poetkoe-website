@@ -39,7 +39,7 @@ export default class Namegenerator extends TrackerReact(Component) {
                   placeholder="Your name here"
                   onChange={this.updateName.bind(this)} />
                 <p className="output" onClick={this.poetkoeifyName.bind(this)}>Your Poetkoeified name is... <br/> {this.state.poetkoeifiedName}</p>
-          <p className="hint">(Try "Kimi Räikkönen" or "Mika Häkkinen")</p>
+          <p className="hint">(Try "Kaisa Mäkäräinen" or "Kimi Räikkönen")</p>
         </form>
       </div>
     )
