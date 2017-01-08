@@ -33,27 +33,30 @@ Meteor.methods({
 
 
 function formatBlogpost(text) {
-    //there's always the same html tags in the beginning of the result
-    //text starts from index 61
-    let t = text.substr(61);
+    //content text snippet in a p with class "medium-feed-snippet"
+    //so let's find that index and start reading after it
+    let begin = text.indexOf('medium-feed-snippet') + 21;
+    let parsedString = text.substr(begin);
 
-    //text ends either with a tag ("<") or an ampersand ("&"),
-    //let's find out which comes first and chop there
-    //this obviously fails to function properly if the text contains an ampersand
-    let firstTagOpens = t.indexOf("<");
-    let textEnds = t.indexOf("&") > 0 ? t.indexOf("&") : 1000; //dumb hack to counter the negative index
+    //text ends with a tag ("<") or with "&#x"
+    //let's find which comes first and chop there
+    let firstTagOpens = parsedString.indexOf('<');
+    let textEnds = parsedString.indexOf('&#x') > 0 ? parsedString.indexOf('&#x') : 1000;
+    //epic hack to counter the negative index
+
     let smallerOfTheTwo = firstTagOpens < textEnds ? firstTagOpens : textEnds;
-
-    let croppedText = t.substr(0, smallerOfTheTwo);
+    parsedString = parsedString.substr(0, smallerOfTheTwo);
 
     //if last character is a period (full sentence) do nothing, if it's not (sentence chopped)
     //add three dots to end
-    if (croppedText[croppedText.length-1] !== ".") {
-        croppedText += "...";
+    if (parsedString[parsedString.length-1] !== ".") {
+        parsedString += "...";
     }
 
-    return croppedText;
+    return parsedString;
 }
+
+
 
 function formatDate(date) {
     //date in form of "Sun Sep 25 2016 16:44:09 GMT+0300 (EEST)"
