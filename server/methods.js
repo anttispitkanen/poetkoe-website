@@ -27,9 +27,44 @@ Meteor.methods({
 
         return future.wait();
 
+    },
+
+    //fetch the rest of the blogposts starting from index 3
+    fetchRestOfBlogposts() {
+        let feed = require("feed-read");
+        let url = "https://www.medium.com/feed/@Poetkoe";
+        let restOfPosts = [];
+        let Future = require("fibers/future");
+        let future = new Future();
+
+
+        feed(url, (err, posts) => {
+            if (err) {
+                console.log("There has been an error: " + err);
+            } else {
+                for(let i = 3; i < posts.length; i++) {
+                    restOfPosts.push({
+                        "title": posts[i].title,
+                        "formattedText": formatBlogpost(posts[i].content),
+                        "formattedDate": formatDate(posts[i].published),
+                        "link": posts[i].link,
+                        "postID": i
+                    });
+
+                    console.log(posts[i].title);
+                    console.log(formatBlogpost(posts[i].content));
+                }
+                future.return(restOfPosts);
+            }
+        });
+
+        return future.wait();
     }
 
 });
+
+
+
 
 
 function formatBlogpost(text) {

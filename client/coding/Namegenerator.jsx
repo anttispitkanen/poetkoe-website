@@ -12,7 +12,7 @@ export default class Namegenerator extends TrackerReact(Component) {
   }
 
   updateName(event) {
-    this.setState({originalName: event.target.value.substr(0, 25)});
+    this.setState( { originalName: event.target.value.substr(0, 25) } );
   }
 
   poetkoeifyName(event) {
@@ -23,8 +23,8 @@ export default class Namegenerator extends TrackerReact(Component) {
         let length = poetkoeifiedName.length;
         poetkoeifiedName = poetkoeifiedName.substr(0, 25) + "-\n" + poetkoeifiedName.substr(25, length);
     }
-    this.setState({poetkoeifiedName: poetkoeifiedName + " :DD"});
-    this.setState({originalName: ''});
+    this.setState( { poetkoeifiedName: poetkoeifiedName + " :DD" } );
+    this.setState( { originalName: '' } );
   }
 
   render() {
@@ -38,7 +38,7 @@ export default class Namegenerator extends TrackerReact(Component) {
                   ref="name"
                   placeholder="Your name here"
                   onChange={this.updateName.bind(this)} />
-                <p className="output" onClick={this.poetkoeifyName.bind(this)}>Your Poetkoeified name is... <br/> {this.state.poetkoeifiedName}</p>
+                <p className="output">Your Poetkoeified name is... <br/> {this.state.poetkoeifiedName}</p>
           <p className="hint">(Try "Kaisa Mäkäräinen" or "Kimi Räikkönen")</p>
         </form>
       </div>

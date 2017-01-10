@@ -61,11 +61,6 @@ html.no-hover {
         color: $dark-purple-heading;
     }
 
-    .output:hover {
-        box-shadow: 0px 2px 5px 0px $transparent-black;
-        transform: translate(0, 0);
-    }
-
     footer ul li a:hover {
         color: $transparent-white;
     }
@@ -80,6 +75,10 @@ html.no-hover {
 
     .homepage-pic:hover {
         transform: rotate3d(0, 0, 0, 0deg);
+    }
+
+    .latest-posts .show-more-posts .show-more-posts-click:hover {
+        color: $dark-purple-heading;
     }
 }
 
@@ -498,6 +497,24 @@ nav {
                 font-style: italic;
             }
         }
+
+        .show-more-posts {
+            padding-top: 30px;
+            color: $dark-purple-heading;
+            text-align: center;
+
+            .show-more-posts-click {
+                cursor: pointer;
+
+                &:hover {
+                    color: $dark-purple-heading-hover;
+                }
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
     }
 }
 
@@ -601,12 +618,7 @@ nav {
         background-color: $bright-purple;
         background-image: linear-gradient(to right, #DA57E6, $transparent-purple);
         color: $text-on-purple;
-        cursor: pointer;
         box-shadow: 0px 2px 5px 0px $transparent-black;
-        &:hover {
-            transform: translate(0, -5px);
-            box-shadow: 0px 7px 10px 0px $transparent-black;
-        }
     }
 
     .hint {
