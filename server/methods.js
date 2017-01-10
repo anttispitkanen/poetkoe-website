@@ -51,8 +51,6 @@ Meteor.methods({
                         "postID": i
                     });
 
-                    console.log(posts[i].title);
-                    console.log(formatBlogpost(posts[i].content));
                 }
                 future.return(restOfPosts);
             }
