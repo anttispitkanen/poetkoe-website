@@ -25,8 +25,7 @@ export default class Introduction extends Component {
                         You can show support by listening on <a href="https://soundcloud.com/poetkoe"
                         target="_blank">SoundCloud</a> or <a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw"
                         target="_blank">YouTube</a>. Take a peek on <a href="https://www.instagram.com/poetkoe" target="_blank">
-                        Instagram</a>, read my blog on <a href="https://www.medium.com/@Poetkoe" target="_blank">Medium</a> or
-                        give a thumbs up on <a href="https://www.facebook.com/poetkoemusic"
+                        Instagram</a> or give a thumbs up on <a href="https://www.facebook.com/poetkoemusic"
                         target="_blank">Facebook</a> if you feel like it!
                     </p>
                 </div>

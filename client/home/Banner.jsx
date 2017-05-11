@@ -55,8 +55,6 @@ export default class Banner extends Component {
         return(
             <header className="banner" id="home">
 
-                <div id="spinner" className="spinner"></div>
-
                 <div id="hidden-cat" className="hidden-cat hidden">
                     <img src="images/hidden-cat.png"></img>
                     <p>You found the hidden cat! Meow! :DD</p>

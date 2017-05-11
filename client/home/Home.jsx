@@ -5,13 +5,11 @@ import Banner from './Banner.jsx';
 import Introduction from '../introduction/Introduction.jsx';
 import Soundcloud from '../socialmedia/Soundcloud.jsx';
 import Youtube from '../socialmedia/Youtube.jsx';
-import BlogLatest from '../blog/BlogLatest.jsx';
 import Facebook from '../socialmedia/Facebook.jsx';
 import Instagram from '../socialmedia/Instagram.jsx';
 import Coding from '../coding/Coding.jsx';
 import Footer from '../footer/Footer.jsx';
 
-import GigPoetkoe from '../fillers/GigPoetkoe';
 import HatGlasses from '../fillers/HatGlasses';
 import MusaCorner from '../fillers/MusaCorner';
 import Muumi from '../fillers/Muumi';
@@ -39,10 +37,6 @@ export default class Home extends Component {
                 <Teddy />
 
                 <Youtube />
-
-                <GigPoetkoe />
-
-                <BlogLatest />
 
                 <Muumi />
 

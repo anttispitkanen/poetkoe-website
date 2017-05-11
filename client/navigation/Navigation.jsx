@@ -74,7 +74,6 @@ export default class Navigation extends React.Component {
                 <ul className="social-media-icon-links">
                     <li><a href="https://www.soundcloud.com/poetkoe" target="_blank"><i className="fa fa-soundcloud"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCsKV98VedO0epGqJPjeqoQw" target="_blank"><i className="fa fa-youtube"></i></a></li>
-                    <li><a href="https://www.medium.com/@Poetkoe" target="_blank"><i className="fa fa-medium"></i></a></li>
                     <li><a href="https://www.facebook.com/poetkoemusic" target="_blank"><i className="fa fa-facebook-official"></i></a></li>
                     <li><a href="https://www.instagram.com/poetkoe" target="_blank"><i className="fa fa-instagram"></i></a></li>
                 </ul>
@@ -89,7 +88,6 @@ export default class Navigation extends React.Component {
 
                     <a href="#home"><li>Home</li></a>
                     <a href="#soundcloud"><li>Music</li></a>
-                    <a href="#blog"><li>Blog</li></a>
                     <a href="#facebook"><li>Some</li></a>
                 </ul>
 
