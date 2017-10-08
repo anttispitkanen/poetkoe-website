@@ -1,8 +1,3 @@
-# Poetkoe's website
+# Poetkoe's website (legacy)
 
-This is the source of my awesome artist website.
-See the page live at [poetkoe.com](http://poetkoe.com).
-
-Built using:
-* Meteor 1.4
-* React 15.1.0
+This site is no longer in operation. See the new site at [poetkoe.com](http://poetkoe.com).
